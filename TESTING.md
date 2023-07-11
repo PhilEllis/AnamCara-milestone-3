@@ -22,7 +22,9 @@
 ## Test Record :
 **TEST** | **ACTION** | **EXPECTATION** | **RESULT** 
 ----------|----------|----------|----------
- | 	|  |
+ initial python3 run.py| error occurred File "/workspace/AnamCara-milestone-3/notemanager/__init__.py", line 14, in <module>
+    from notekmanager import routes  # noqa
+ModuleNotFoundError: No module named 'notekmanager' 	| file to run | file error - line identified and typo removed
  |  |  | 
  |  |  | 
  |  |  | 
