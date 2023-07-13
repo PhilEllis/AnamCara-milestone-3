@@ -11,22 +11,18 @@
       <h5 class="card-title">Special title treatment</h5>
       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
       <form method="POST" action="{{ url_for('add_note') }}">
+        <!-- note_name -->
         <div class="row mb-3">
-          <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+          <label for="note_name" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
-            <input name="inputName3" type="name" class="form-control" id="inputName3" required>
+            <input name="note_name" type="name" class="form-control" id="note_name" required minlength="3" maxlength="60">
           </div>
         </div>
+        <!-- note_location -->
         <div class="row mb-3">
-          <label for="inputDate3" class="col-sm-2 col-form-label">Date</label>
+          <label for="note_location" class="col-sm-2 col-form-label">Location</label>
           <div class="col-sm-10">
-            <input name="inputDate3" type="date" class="form-control" id="inputDate3" required>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <label for="inputLocation3" class="col-sm-2 col-form-label">Location</label>
-          <div class="col-sm-10">
-            <select id="inputLocation3" name="inputLocation3" class="form-select" aria-label="Default select example" required>
+            <select id="note_location" name="note_location" class="form-select" aria-label="Default select example" required>
               <option selected>Select Continent</option>
               <option value="Africa">Africa</option>
               <option value="Antarctica">Antarctica</option>
@@ -38,28 +34,39 @@
             </select>
           </div>
         </div>
+        <!-- submission_date -->
         <div class="row mb-3">
-            <label for="inputTitle3" class="col-sm-2 col-form-label">Title</label>
+          <label for="submission_date" class="col-sm-2 col-form-label">Date</label>
           <div class="col-sm-10">
-            <input name="inputTitle3" type="text" class="form-control" id="inputTitle3" required>
+            <input name="submission_date" type="date" class="form-control" id="submission_date" required>
           </div>
         </div>
+        <!-- note_title -->
         <div class="row mb-3">
-            <label for="inputMessage3" class="col-sm-2 col-form-label">Message</label>
+            <label for="note_title" class="col-sm-2 col-form-label">Title</label>
           <div class="col-sm-10">
-            <textarea name="inputMessage3" type="text" class="form-control" id="inputMessage3" rows="3" required></textarea>
+            <input name="note_title" type="text" class="form-control" id="note_title" required minlength="5" maxlength="60">
           </div>
         </div>
+        <!-- note_message -->
         <div class="row mb-3">
-            <label for="inputTitle3" class="col-sm-2 col-form-label">Connect</label>
+            <label for="note_message" class="col-sm-2 col-form-label">Message</label>
           <div class="col-sm-10">
-            <input name="inputConnect3" type="text" class="form-control" id="inputConnect3" required>
+            <textarea name="note_message" type="text" class="form-control" id="note_message" rows="3" required minlength="100" maxlength="1000"></textarea>
           </div>
         </div>
+        <!-- note_connect -->
         <div class="row mb-3">
-            <label for="inputPublish3" class="col-sm-2 col-form-label">Publish</label>
+            <label for="note_connect" class="col-sm-2 col-form-label">Connect</label>
+          <div class="col-sm-10">
+            <input name="note_connect" type="text" class="form-control" id="note_connect" required minlength="3" maxlength="70">
+          </div>
+        </div>
+        <!-- publish_date -->
+        <div class="row mb-3">
+            <label for="publish_date" class="col-sm-2 col-form-label">Publish</label>
             <div class="col-sm-10">
-              <input name="inputPublish3" type="date" class="form-control" id="inputPublish3" required>
+              <input name="publish_date" type="date" class="form-control" id="publish_date" required>
             </div>
           </div>
       <a href="#" class="btn btn-primary">Send your hearts whisper</a>
