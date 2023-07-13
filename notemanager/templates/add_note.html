@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-muted">Add Note</h3>
-
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-10">
 <div class="card text-center shadow">
     <div class="card-header">
       Featured
@@ -69,11 +70,14 @@
             <input name="publish_date" type="date" class="form-control" id="publish_date" required>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Send your heart's whisper</button>
+        <button type="submit" class="btn btn-outline-dark">Send your heart's whisper</button>
       </div>
     <div class="card-footer text-body-secondary">
       Whispers
     </div>
   </div>
+</div>
+</div>
+</div>
 
 {% endblock %}
