@@ -24,35 +24,32 @@
 
 <div class="container">
   <div class="row d-flex justify-content-center align-items-center">
+    {% for note in notes %}
     <div class="col-10">
       <div class="card mt-5 mb-3 shadow">
-        <h5 class="card-header">Title</h5>
+        <h5 class="card-header">{{ note.note_title }}</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Name</li>
-          <li class="list-group-item">Location</li>
-          <li class="list-group-item">Date</li>
+          <li class="list-group-item">{{ note.note_name }}</li>
+          <li class="list-group-item">{{ note.note_submission_date }}</li>
+          <li class="list-group-item">{{ note.note_location }}</li>
         </ul>
         <div class="card-body">
-        <p class="card-text">Amidst the chaos of life's storms, I find solace in your presence. 
-          Your gentle words and warm embrace are the anchors that steady my restless heart. 
-          Together, we navigate the ebbs and flows, sharing laughter, tears, and dreams. 
-          In your eyes, I see a reflection of my true self, accepted and cherished without judgment. 
-          You are my guiding light, my sanctuary of love. Let our souls dance in this sacred connection, 
-          as we journey through life, hand in hand, whispering secrets of the heart.</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Connect</li>
-      </ul>
-      <div class="card-body d-flex justify-content-between">
-        <div>
-        <a href="#" class="btn btn-primary">Update</a>
+        <p class="card-text">{{ note.note_message }}</p>
         </div>
-        <div></div>
-        <a href="#" class="card-link"><i class="fa-regular fa-trash-can fa-xl"></i></a>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ note.note_connect }}</li>
+          </ul>
+        <div class="card-body d-flex justify-content-between">
+          <div>
+            <a href="#" class="btn btn-outline-dark">Update</a>
+          </div>
+          <div>
+            <a href="#" class="card-link"><i class="fa-regular fa-trash-can fa-xl"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    </div>
+    {% endfor %}
   </div>
 </div>  
 
