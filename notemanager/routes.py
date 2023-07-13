@@ -10,7 +10,8 @@ def home():
 
 @app.route("/notes")
 def notes():
-    return render_template("notes.html")
+    notes = Note.query.all()  # Retrieve all notes from the database
+    return render_template("notes.html", notes=notes)
 
 
 @app.route("/add_note", methods=["GET", "POST"])
