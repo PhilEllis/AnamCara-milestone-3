@@ -30,3 +30,19 @@ def add_note():
         db.session.commit()
         return redirect(url_for("notes"))
     return render_template("add_note.html")
+
+
+@app.route("/edit_note/<int:note_id>", methods=["GET", "POST"])
+def edit_note(note_id):
+    note = Note.query.get_or_404(note_id) 
+    if request.method == "POST":
+        note.note_name = request.form.get("note_name")
+        note.note_location = request.form.get("note_location")
+        note.submission_date = request.form.get("submission_date")
+        note.note_title = request.form.get("note_title")
+        note.note_message = request.form.get("note_message")
+        note.note_connect = request.form.get("note_connect")
+        note.publish_date = request.form.get("publish_date")
+        db.session.commit()
+        return redirect(url_for("notes"))
+    return render_template("edit_note.html", note=note)
