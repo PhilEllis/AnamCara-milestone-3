@@ -40,7 +40,7 @@
           </ul>
         <div class="card-body d-flex justify-content-between">
           <div>
-            <a href="#" class="btn btn-outline-dark">Update</a>
+            <a href="{{ url_for('edit_note', note_id=note.id) }}" class="btn btn-outline-dark">Update</a>
           </div>
           <div>
             <a href="#" class="card-link"><i class="fa-regular fa-trash-can fa-xl"></i></a>
