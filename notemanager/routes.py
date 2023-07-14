@@ -10,7 +10,7 @@ def home():
 
 @app.route("/notes")
 def notes():
-    notes = Note.query.all()  # Retrieve all notes from the database
+    notes = Note.query.order_by(Note.id.desc()).all()  # Retrieve all notes from the database
     return render_template("notes.html", notes=notes)
 
 
@@ -34,7 +34,7 @@ def add_note():
 
 @app.route("/edit_note/<int:note_id>", methods=["GET", "POST"])
 def edit_note(note_id):
-    note = Note.query.get_or_404(note_id) 
+    note = Note.query.get_or_404(note_id)
     if request.method == "POST":
         note.note_name = request.form.get("note_name")
         note.note_location = request.form.get("note_location")
