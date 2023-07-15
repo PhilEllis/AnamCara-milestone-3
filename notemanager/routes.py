@@ -1,7 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from notemanager import app, db
 from notemanager.models import Note
-from datetime import datetime
 
 
 @app.route("/")
@@ -11,7 +10,7 @@ def home():
 
 @app.route("/notes")
 def notes():
-    notes = Note.query.order_by(Note.id.desc()).all()  # Retrieve all notes from the database
+    notes = Note.query.order_by(Note.id.desc()).all()  # Retrieve all notes from the database in descending order
     return render_template("notes.html", notes=notes)
 
 
