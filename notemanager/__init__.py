@@ -24,6 +24,7 @@ db = SQLAlchemy(app)
 # Custom filter function checks if the note publish date is in the past
 def past_publish_date(date_string):
     current_date = datetime.now().date()
+    date_string = date_string.strftime("%Y/%m/%d")
     publish_date = datetime.strptime(date_string, "%Y/%m/%d").date()
     return publish_date < current_date
 
