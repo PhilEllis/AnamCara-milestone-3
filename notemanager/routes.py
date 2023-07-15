@@ -10,7 +10,7 @@ def home():
 
 @app.route("/notes")
 def notes():
-    notes = Note.query.order_by(Note.id.desc()).all()  # Retrieve all notes from the database in descending order
+    notes = Note.query.order_by(Note.id.desc()).all()  # Retrieve all notes
     return render_template("notes.html", notes=notes)
 
 
