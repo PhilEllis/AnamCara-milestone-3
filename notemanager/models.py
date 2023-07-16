@@ -11,9 +11,20 @@ class Note(db.Model):
     note_message = db.Column(db.Text, nullable=False)
     note_connect = db.Column(db.String(50), nullable=False)
     publish_date = db.Column(db.Date, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
         return "#{0} - Name: {1} | Publish: {2}".format(
             self.id, self.note_name, self.publish_date
         )
+
+
+class User(db.Model):
+    # schema for the user authentication model 
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(50), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+
+    def __repr__(self):
+        return f"User ID: {self.id}, Username: {self.username}"

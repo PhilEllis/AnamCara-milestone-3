@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from notemanager import app, db
-from notemanager.models import Note
+from notemanager.models import Note, User
 
 
 @app.route("/")
