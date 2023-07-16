@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from flask_login import LoginManager
 if os.path.exists("env.py"):
     import env  # noqa
 
@@ -9,6 +10,13 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
+# Create an instance of LoginManager
+login_manager = LoginManager(app)
+
+# Set up the login view for authentication
+login_manager.login_view = "login"
+
+# Configure the database
 if os.environ.get("DEVELOPMENT") == "True":
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")  # local
 else:
