@@ -1,21 +1,85 @@
 from flask import render_template, request, redirect, url_for
-from notemanager import app, db
+from notemanager import app, db, login_manager
 from notemanager.models import Note, User
 from flask_login import (
-    LoginManager,
     UserMixin,
     login_user,
     logout_user,
     login_required,
     current_user,
 )
-from wtforms import StringField, PasswordField
-from wtforms.validators import DataRequired, Length
+from wtforms import StringField, PasswordField, BooleanField
+from wtforms.validators import DataRequired, Length, InputRequired, Email
+from flask_wtf import FlaskForm
+
+
+# Callback to reload user object from user ID
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
+
+
+class LoginForm(FlaskForm):  # routes.py
+    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
+    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
+    remember = BooleanField('remember me')
+
+
+class RegisterForm(FlaskForm):  # routes.py
+    email = StringField('email', validators=[InputRequired(), Email(message='Invalid email'), Length(max=50)])
+    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
+    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
 
 
 @app.route("/")
 def home():
     return render_template("home.html")
+
+
+@app.route('/login', methods=['GET', 'POST'])  # routes.py
+def login():
+    form = LoginForm()
+
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user:
+            if check_password_hash(user.password, form.password.data):
+                login_user(user, remember=form.remember.data)
+                return redirect(url_for('dashboard'))
+
+        return '<h1>Invalid username or password</h1>'
+        # return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'
+
+    return render_template('login.html', form=form)
+
+
+@app.route('/signup', methods=['GET', 'POST'])  # routes.py
+def signup():
+    form = RegisterForm()
+
+    if form.validate_on_submit():
+        hashed_password = generate_password_hash(form.password.data, method='sha256')
+        new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+
+        return '<h1>New user has been created!</h1>'
+        # return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
+
+    return render_template('signup.html', form=form)
+
+
+@app.route('/dashboard')  # routes.py
+@login_required
+def dashboard():
+    return render_template('dashboard.html', name=current_user.username)
+
+
+@app.route('/logout')  # routes.py
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 
 @app.route("/notes")
