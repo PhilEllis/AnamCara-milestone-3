@@ -135,6 +135,17 @@ h6 {
     margin-right: 0;
     color: #ADAA99;
   }
+
+
+  #notes-hero .card {
+    background-color: rgba(201, 202, 200, 1);
+    margin-top: 100px;
+  }
+
+  #notes-hero .btn:hover {
+    color: #ffd584;
+  }
+
   /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -239,6 +250,31 @@ h6 {
   --------------------------------------------------------------*/
   #notes-display {
     background-color: rgba(90, 99, 84, 1);
+  }
+
+  #notes-display .card-header {
+    font-family: "Spectral", sans-serif;
+    font-size: 26px;
+  }
+
+  #notes-display .card {
+    background-color: rgba(241, 240, 240, 0.6);
+  }
+  
+  #notes-display li {
+    background-color: rgba(209, 209, 209, 0.7);
+  }
+
+  #notes-display .trash i {
+    color: #151515;
+  }
+
+  #notes-display .trash i:hover {
+    color: #ffd584;
+  }
+
+  #notes-display .btn:hover {
+    color: #ffd584;
   }
 
 /*--------------------------------------------------------------
