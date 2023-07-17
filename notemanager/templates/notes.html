@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="container">
+<section id="notes-hero" class="d-flex align-items-center justify-content-center shadow">
+<div class="container-fluid">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-6">
       <div class="card text-center mb-5 shadow">
@@ -20,9 +20,11 @@
     </div>
   </div>  
 </div>
+</section>
 
+<section id="notes-display" class="d-flex align-items-center justify-content-center">
 <div class="container">
-  <div class="row d-flex justify-content-center align-items-center">
+  <div class="row d-flex justify-content-center align-items-center mb-5">
     {% for note in notes %}
     <div class="col-10">
       {% if note.publish_date|past_publish_date %}
@@ -58,7 +60,7 @@
     </div>
     {% endfor %}
   </div>
-</div>  
+</div>
 
 <!-- Delete Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -78,5 +80,6 @@
     </div>
   </div>
 </div>
+</section>
 
 {% endblock %}
