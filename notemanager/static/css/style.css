@@ -5,7 +5,7 @@
   #header {
     z-index: 997;
     padding: 0;
-    background: rgba(9, 13, 7, 0.8);
+    background: rgb(18, 22, 16, 0.8);
   }
 
  /*--------------------------------------------------------------
@@ -54,19 +54,98 @@
       margin-right: 15px;
     }
   }
-  
+
   /*--------------------------------------------------------------
   # Main
   --------------------------------------------------------------*/
-  .main {
-    margin-top: 100px;
-    margin-bottom: 100px;
+  #main {
+    margin: 0 0 0 0;
   }
+
+  .container .main {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+   /*--------------------------------------------------------------
+  # Hero
+  --------------------------------------------------------------*/
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg.jpg") repeat scroll center center/cover;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    color: #ADAA99;
+  }
+
+  /*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+#links {
+  background-color: rgba(90, 99, 84, 1);
+  min-height: 700px;
+}
+
+.links .icon-box {
+  text-align: center;
+  border: 1px solid rgba(235, 235, 235, 0.5);
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: rgba(162, 169, 158, 1);
+}
+
+.links .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #ffc451;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.links .icon-box .icon i {
+  color: #151515;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.links .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.links .icon-box h4 a {
+  color: #151515;
+  transition: ease-in-out 0.3s;
+}
+
+.links .icon-box h4 a:hover {
+  color: #ffc451;
+}
+
+.links .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.links .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+}
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
   footer {
-    background: rgba(9, 13, 7, 0.8);
+    background: rgb(18, 22, 16, 1);
     color: #ADAA99;
   }
 
