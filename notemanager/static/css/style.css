@@ -222,6 +222,18 @@ h6 {
     color: #ADAA99;
   }
 
+  #recap h1 {
+    font-family: "Spectral", sans-serif;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #ffd584;
+  }
+
+  #recap i {
+    margin-bottom: 40px;
+    color: #ffd584;
+  }
+
 /*--------------------------------------------------------------
   # Notes Display
   --------------------------------------------------------------*/
