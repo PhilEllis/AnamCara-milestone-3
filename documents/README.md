@@ -1,10 +1,15 @@
 
 # Anam Cara
 
-<h1 align="center"><img src="assets/img/readmeimg/splanetslivepreview.png" /></h1>
+<h1 align="center"><img src="documents/img/anamcarafavicon.png"/></h1>
+(documents/img/anamcarapreview.png)
+documents/img/anamcarafavicon.png
+![App Preview](documents/AnamcaraPreview.png)
 
-<a href="https://philellis.github.io/Splanets/"><img src="assets/img/splanetslogo.png" width="30px" /></a> Live website
-https://ui.dev/amiresponsive
+<a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="assets/img/splanetslogo.png" width="30px" /></a> Live website
+https://anam-cara-45d556e859ea.herokuapp.com/
+
+<a href="https://github.com/PhilEllis/Splanets"><img src="assets/img/readmeimg/GitHub.png" width="30px" /></a> GitHub Repository
 
 <a href="https://github.com/PhilEllis/Splanets"><img src="assets/img/readmeimg/GitHub.png" width="30px" /></a> GitHub Repository
 
