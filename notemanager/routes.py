@@ -35,6 +35,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/")
+def about():
+    return render_template("about.html")
+
+
 @app.route('/login', methods=['GET', 'POST'])  # routes.py
 def login():
     form = LoginForm()
