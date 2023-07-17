@@ -1,6 +1,6 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from notemanager import app, db, login_manager
-from notemanager.models import Note, User
+from notemanager.models import Note, User, generate_password_hash, check_password_hash
 from flask_login import (
     UserMixin,
     login_user,
@@ -26,7 +26,6 @@ class LoginForm(FlaskForm):  # routes.py
 
 
 class RegisterForm(FlaskForm):  # routes.py
-    email = StringField('email', validators=[InputRequired(), Email(message='Invalid email'), Length(max=50)])
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
 
@@ -45,7 +44,7 @@ def login():
         if user:
             if check_password_hash(user.password, form.password.data):
                 login_user(user, remember=form.remember.data)
-                return redirect(url_for('dashboard'))
+                return redirect(url_for('notes'))
 
         return '<h1>Invalid username or password</h1>'
         # return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'
@@ -59,20 +58,13 @@ def signup():
 
     if form.validate_on_submit():
         hashed_password = generate_password_hash(form.password.data, method='sha256')
-        new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        new_user = User(username=form.username.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
 
-        return '<h1>New user has been created!</h1>'
-        # return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
-
+        flash('Welcome, {}! You have successfully signed up.'.format(new_user.username), 'success')
+        return redirect(url_for('notes'))
     return render_template('signup.html', form=form)
-
-
-@app.route('/dashboard')  # routes.py
-@login_required
-def dashboard():
-    return render_template('dashboard.html', name=current_user.username)
 
 
 @app.route('/logout')  # routes.py
@@ -89,6 +81,7 @@ def notes():
 
 
 @app.route("/add_note", methods=["GET", "POST"])
+@login_required
 def add_note():
     if request.method == "POST":
         note = Note(
