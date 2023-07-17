@@ -149,6 +149,20 @@
     background-color: rgba(119, 130, 115, 1);
     min-height: 700px;
   }
+
+   /*--------------------------------------------------------------
+  # Recap
+  --------------------------------------------------------------*/
+  #recap {
+    width: 100%;
+    min-height: 600px;
+    background: url("../img/recap-bg.jpg") repeat scroll center center/cover;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    color: #ADAA99;
+  }
+
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
