@@ -41,10 +41,16 @@
           </ul>
         <div class="card-body d-flex justify-content-between">
           <div>
+            {% if current_user.is_authenticated and current_user.id == note.user_id %}
             <a href="{{ url_for('edit_note', note_id=note.id) }}" class="btn btn-outline-dark">Update</a>
+            {% endif %}
           </div>
           <div>
-            <a href="{{ url_for('delete_note', note_id=note.id) }}" class="card-link"><i class="fa-regular fa-trash-can fa-xl"></i></a>
+            {% if current_user.is_authenticated and current_user.id == note.user_id %}
+            <a href="{{ url_for('delete_note', note_id=note.id) }}" class="card-link" data-bs-toggle="modal" data-bs-target="#deleteModal">
+            <i class="fa-regular fa-trash-can fa-xl"></i>
+            </a>
+            {% endif %}
           </div>
         </div>
       </div>
