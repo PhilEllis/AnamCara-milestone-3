@@ -356,6 +356,28 @@ h6 {
     margin-bottom: 70px;
   }
 
+  #notes-login .card {
+    background-color: rgb(211, 211, 211);
+  }
+
+  #notes-login .btn {
+    background-color: #B0B2AC;
+    margin-top: 20px;
+  }
+
+  #notes-login .btn:hover {
+    background-color: #1f1f1f;
+    color: #ffd584;
+  }
+
+  #notes-login a {
+    color: #1f1f1f;
+  }
+
+  #notes-login a:hover {
+    color: #ffd584;
+  }
+
   /*--------------------------------------------------------------
   # Notes sign-in 
   --------------------------------------------------------------*/
@@ -367,6 +389,20 @@ h6 {
   #notes-signin .form-margin {
     margin-top: 120px;
     margin-bottom: 70px;
+  }
+
+  #notes-signin .card {
+    background-color: rgb(211, 211, 211);
+  }
+
+  #notes-signin .btn {
+    background-color: #B0B2AC;
+    margin-top: 20px;
+  }
+
+  #notes-signin .btn:hover {
+    background-color: #1f1f1f;
+    color: #ffd584;
   }
 
   /*--------------------------------------------------------------
