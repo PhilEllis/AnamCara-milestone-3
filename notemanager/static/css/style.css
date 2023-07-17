@@ -151,6 +151,47 @@ h6 {
     color: #ffd584;
   }
 
+    /*--------------------------------------------------------------
+  # Section title
+  --------------------------------------------------------------*/
+  .section-title {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Spectral", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #1f1f1f;
+  }
+  
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ADAA99;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #ffd584;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+
   /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -218,7 +259,7 @@ h6 {
   --------------------------------------------------------------*/
   #quotes {
     background-color: rgba(119, 130, 115, 1);
-    min-height: 700px;
+    min-height: 800px;
   }
 
   #quotes .card {
