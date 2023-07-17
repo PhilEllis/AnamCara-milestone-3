@@ -98,7 +98,8 @@ def add_note():
             note_title=request.form.get("note_title"),
             note_message=request.form.get("note_message"),
             note_connect=request.form.get("note_connect"),
-            publish_date=request.form.get("publish_date")
+            publish_date=request.form.get("publish_date"),
+            user_id=current_user.id
         )
         db.session.add(note)
         db.session.commit()
