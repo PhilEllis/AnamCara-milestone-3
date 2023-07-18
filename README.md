@@ -160,8 +160,26 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 
 >### Specific to Pages
--  **Index**
-    - Welcome 
+-  **Index/Home**
+    - Welcome to Anam Cara
+    - 3 options within the body to help users decide where they want to navigate to
+    - qoutes section displaying sample messages
+    - Recap information at the bottom of the page
+-  **Notes/Connect**
+    - Card displaying link and info to encourage user to login or sign up to create a message
+    - Display of all of the messages left so far that can be scrolled through.
+    - If logged in certain notes will have update and delete buttons available to the user who submitted the message
+-  **add_note/Express&edit_note**
+    - Redirects user to login if not already logged in
+    - displays the note form to allow the user to submit their message and details
+-  **login**
+    - login form
+    - links to sign up 
+    - once logged in Navbar changes login to logout
+-  **sign up**
+   - sign up form 
+
+
 
 
 
