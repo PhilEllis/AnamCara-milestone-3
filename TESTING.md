@@ -1,5 +1,6 @@
 # Anam Cara - Testing
 
+![App Preview](documents/AnamcaraPreview.png)
 
 
 ## Table of Contents
