@@ -2,83 +2,83 @@
 {% block content %}
 
 <section id="notes-edit" class="d-flex align-items-center justify-content-center">
-<div class="container">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-10 form-margin">
-<div class="card text-center shadow">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <form method="POST" action="{{ url_for('edit_note', note_id=note.id) }}">
-        <!-- note_name -->
-        <div class="row mb-3">
-          <label for="note_name" class="col-sm-2 col-form-label">Name</label>
-          <div class="col-sm-10">
-            <input name="note_name" type="name" value="{{ note.note_name }}"class="form-control" id="note_name" required minlength="3" maxlength="60">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-10 form-margin">
+        <div class="card text-center shadow">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <form method="POST" action="{{ url_for('edit_note', note_id=note.id) }}">
+            <!-- note_name -->
+            <div class="row mb-3">
+              <label for="note_name" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input name="note_name" type="name" value="{{ note.note_name }}"class="form-control" id="note_name" required minlength="3" maxlength="60">
+              </div>
+            </div>
+            <!-- note_location -->
+            <div class="row mb-3">
+              <label for="note_location" class="col-sm-2 col-form-label">Location</label>
+              <div class="col-sm-10">
+                <select id="note_location" name="note_location" value="{{ note.note_location }}" class="form-select" aria-label="Default select example" required>
+                  <option selected>Select Continent</option>
+                  <option value="Africa">Africa</option>
+                  <option value="Antarctica">Antarctica</option>
+                  <option value="Asia">Asia</option>
+                  <option value="Europe">Europe</option>
+                  <option value="North America">North America</option>
+                  <option value="Australasia">Australasia</option>
+                  <option value="South America">South America</option>
+                </select>
+              </div>
+            </div>
+            <!-- submission_date -->
+            <div class="row mb-3">
+              <label for="submission_date" class="col-sm-2 col-form-label">Date</label>
+              <div class="col-sm-10">
+                <input name="submission_date" type="date" value="{{ note.submission_date }}" class="form-control" id="submission_date" required>
+              </div>
+            </div>
+            <!-- note_title -->
+            <div class="row mb-3">
+              <label for="note_title" class="col-sm-2 col-form-label">Title</label>
+              <div class="col-sm-10">
+                <input name="note_title" type="text" value="{{ note.note_title }}" class="form-control" id="note_title" required minlength="5" maxlength="60">
+              </div>
+            </div>
+            <!-- note_message -->
+            <div class="row mb-3">
+              <label for="note_message" class="col-sm-2 col-form-label">Message</label>
+              <div class="col-sm-10">
+                <textarea name="note_message" type="text" value="{{ note.note_message }}" class="form-control" id="note_message" rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
+              </div>
+            </div>
+            <!-- note_connect -->
+            <div class="row mb-3">
+              <label for="note_connect" class="col-sm-2 col-form-label">Connect</label>
+              <div class="col-sm-10">
+                <input name="note_connect" type="text" value="{{ note.note_connect }}" class="form-control" id="note_connect" required minlength="3" maxlength="70">
+              </div>
+            </div>
+            <!-- publish_date -->
+            <div class="row mb-3">
+              <label for="publish_date" class="col-sm-2 col-form-label">Publish</label>
+              <div class="col-sm-10">
+                <input name="publish_date" type="date" value="{{ note.publish_date }}" class="form-control" id="publish_date" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Edit your heart's whisper</button>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <i class="fa-brands fa-centos fa-xl"></i>
           </div>
         </div>
-        <!-- note_location -->
-        <div class="row mb-3">
-          <label for="note_location" class="col-sm-2 col-form-label">Location</label>
-          <div class="col-sm-10">
-            <select id="note_location" name="note_location" value="{{ note.note_location }}" class="form-select" aria-label="Default select example" required>
-              <option selected>Select Continent</option>
-              <option value="Africa">Africa</option>
-              <option value="Antarctica">Antarctica</option>
-              <option value="Asia">Asia</option>
-              <option value="Europe">Europe</option>
-              <option value="North America">North America</option>
-              <option value="Australasia">Australasia</option>
-              <option value="South America">South America</option>
-            </select>
-          </div>
-        </div>
-        <!-- submission_date -->
-        <div class="row mb-3">
-          <label for="submission_date" class="col-sm-2 col-form-label">Date</label>
-          <div class="col-sm-10">
-            <input name="submission_date" type="date" value="{{ note.submission_date }}" class="form-control" id="submission_date" required>
-          </div>
-        </div>
-        <!-- note_title -->
-        <div class="row mb-3">
-            <label for="note_title" class="col-sm-2 col-form-label">Title</label>
-          <div class="col-sm-10">
-            <input name="note_title" type="text" value="{{ note.note_title }}" class="form-control" id="note_title" required minlength="5" maxlength="60">
-          </div>
-        </div>
-        <!-- note_message -->
-        <div class="row mb-3">
-            <label for="note_message" class="col-sm-2 col-form-label">Message</label>
-          <div class="col-sm-10">
-            <textarea name="note_message" type="text" value="{{ note.note_message }}" class="form-control" id="note_message" rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
-          </div>
-        </div>
-        <!-- note_connect -->
-        <div class="row mb-3">
-            <label for="note_connect" class="col-sm-2 col-form-label">Connect</label>
-          <div class="col-sm-10">
-            <input name="note_connect" type="text" value="{{ note.note_connect }}" class="form-control" id="note_connect" required minlength="3" maxlength="70">
-          </div>
-        </div>
-        <!-- publish_date -->
-        <div class="row mb-3">
-          <label for="publish_date" class="col-sm-2 col-form-label">Publish</label>
-          <div class="col-sm-10">
-            <input name="publish_date" type="date" value="{{ note.publish_date }}" class="form-control" id="publish_date" required>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-outline-dark">Edit your heart's whisper</button>
       </div>
-    <div class="card-footer text-body-secondary">
-      <i class="fa-brands fa-centos fa-xl"></i>
     </div>
   </div>
-</div>
-</div>
-</div>
 </section>
 {% endblock %}
