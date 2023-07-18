@@ -1,8 +1,11 @@
 
 # Anam Cara
 
-<h1 align="center"><img src="documents/img/anamcarafavicon.png"/></h1>
+<h1 align="center"><img src="/AnamcaraPreview.png"/></h1>
 ![App Preview](documents/AnamcaraPreview.png)
+![App Preview](AnamcaraPreview.png)
+
+![App Preview](anamcarapreview.png)
 
 <a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="assets/img/splanetslogo.png" width="30px" /></a> Live website
 https://anam-cara-45d556e859ea.herokuapp.com/
