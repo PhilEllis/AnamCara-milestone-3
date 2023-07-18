@@ -4,7 +4,7 @@ from flask_login import UserMixin, LoginManager
 
 
 class Note(db.Model):
-    # schema for the note model
+    """Schema for the note model."""
     id = db.Column(db.Integer, primary_key=True)
     note_name = db.Column(db.String(50), nullable=False)
     note_location = db.Column(db.String(50), nullable=False)
@@ -16,18 +16,18 @@ class Note(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
     def __repr__(self):
-        # __repr__ to represent itself in the form of a string
+        """Representation of the Note object."""
         return "#{0} - Name: {1} | Publish: {2}".format(
             self.id, self.note_name, self.publish_date
         )
 
 
 class User(UserMixin, db.Model):
-    # schema for the user authentication model
+    """Schema for the user authentication model."""
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
 
     def __repr__(self):
-        # __repr__ to represent itself in the form of a string
+        """Representation of the User object."""
         return f"User ID: {self.id}, Username: {self.username}"

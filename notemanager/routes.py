@@ -1,6 +1,11 @@
 from flask import render_template, request, redirect, url_for, flash
 from notemanager import app, db, login_manager
-from notemanager.models import Note, User, generate_password_hash, check_password_hash
+from notemanager.models import (
+    Note,
+    User,
+    generate_password_hash,
+    check_password_hash,
+)
 from flask_login import (
     UserMixin,
     login_user,
@@ -13,35 +18,40 @@ from wtforms.validators import DataRequired, Length, InputRequired, Email
 from flask_wtf import FlaskForm
 
 
-# Callback to reload user object from user ID
 @login_manager.user_loader
 def load_user(user_id):
+    """Callback to reload user object from user ID."""
     return User.query.get(user_id)
 
 
-class LoginForm(FlaskForm):  # routes.py
+class LoginForm(FlaskForm):
+    """Form for user login."""
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
     remember = BooleanField('remember me')
 
 
-class RegisterForm(FlaskForm):  # routes.py
+class RegisterForm(FlaskForm):
+    """Form for user registration."""
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
 
 
 @app.route("/")
 def home():
+    """Render the home page."""
     return render_template("home.html")
 
 
 @app.route("/about")
 def about():
+    """Render the about page."""
     return render_template("about.html")
 
 
-@app.route('/login', methods=['GET', 'POST'])  # routes.py
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    """Handle user login."""
     form = LoginForm()
 
     if form.validate_on_submit():
@@ -57,8 +67,9 @@ def login():
     return render_template('login.html', form=form)
 
 
-@app.route('/signup', methods=['GET', 'POST'])  # routes.py
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    """Handle user registration."""
     form = RegisterForm()
 
     if form.validate_on_submit():
@@ -72,22 +83,25 @@ def signup():
     return render_template('signup.html', form=form)
 
 
-@app.route('/logout')  # routes.py
+@app.route('/logout')
 @login_required
 def logout():
+    """Handle user logout."""
     logout_user()
     return redirect(url_for('home'))
 
 
 @app.route("/notes")
 def notes():
-    notes = Note.query.order_by(Note.id.desc()).all()  # Retrieve all notes
+    """Render the notes page."""
+    notes = Note.query.order_by(Note.id.desc()).all()
     return render_template("notes.html", notes=notes)
 
 
 @app.route("/add_note", methods=["GET", "POST"])
 @login_required
 def add_note():
+    """Handle adding a new note."""
     if request.method == "POST":
         note = Note(
             note_name=request.form.get("note_name"),
@@ -107,6 +121,7 @@ def add_note():
 
 @app.route("/edit_note/<int:note_id>", methods=["GET", "POST"])
 def edit_note(note_id):
+    """Handle editing a note."""
     note = Note.query.get_or_404(note_id)
     if request.method == "POST":
         note.note_name = request.form.get("note_name")
@@ -123,6 +138,7 @@ def edit_note(note_id):
 
 @app.route("/delete_note/<int:note_id>")
 def delete_note(note_id):
+    """Handle deleting a note."""
     note = Note.query.get_or_404(note_id)
     db.session.delete(note)
     db.session.commit()
