@@ -2,8 +2,6 @@
 # Anam Cara
 
 <h1 align="center"><img src="documents/img/anamcarafavicon.png"/></h1>
-(documents/img/anamcarapreview.png)
-documents/img/anamcarafavicon.png
 ![App Preview](documents/AnamcaraPreview.png)
 
 <a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="assets/img/splanetslogo.png" width="30px" /></a> Live website
@@ -54,30 +52,29 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 ## User Stories - 
 - #### story 1
-    1. I want to be able to consume the information taught in a visual, fun and engaging manor.
-    1. I want any quiz writing to be minimal.
-    1. I want to be able to select the answers myself.
-    1. I want a visual reward to work towards to keep me engaged. 
-    
+    1. I want to connect with like-minded individuals who resonate with my messages, fostering meaningful conversations and supportive interactions.
+    1. I want to be able to login and edit or delete my messages should i chnge my mind.
+    1. I want to be able to revisit and reflect upon my past messages, witnessing my personal growth and evolution over time.
+    1. I want this to provide me with a slower less intrusive way of expressing myself and connecting.
+
     
 - #### Story 2.
-    1. I am easily distracted, anything with too many words or instructions in it and i loose interest. 
-    1. Anything that is hard to navigate will mean i loose interest, navigating the quiz must be intuitive. 
-    1. I like to learn alone and so i must be able to select the answers myself. 
-    1. I need education to be fun and engaging to maintain my concentration. 
-    1. I struggle to sit with a book so something interactive is better suited to my learning style. 
+    1. I want the platform to provide a user-friendly and intuitive interface, allowing me to easily navigate through messages and engage with the community.
+    1. I want to choose when to publish my message in particular around a date that holds significance to me.
+    1. I want the platform to provide a sense of serenity and tranquility, offering a calming and visually appealing environment where I can immerse myself in the heartfelt messages. 
+    1. I want the option to choose if i share my contact details and if i do have the freedom to choose what contact details i share to connect with other community members.
    
 
 - #### Story 3
-    1. I am fascinated by the topic of the solar system and love learning new facts about it. 
-    1. I am enjoy learning independently so would like a simple quiz i could navigate on my own.
-    1. I love to be tested and want to achieve a high score so it is important that i know my score and am rewarded for my hard work. 
+    1. I am fed up of the monotony of social media and i need a reset. I want this platform to foster slow reading and occasional visits apposed to endless scrolling.  
+    1. I want to be able to connect in a world were anonymous trolls are not able to attack posts with comments but instead people can request to connect. 
+    1. I don't want to provide a profile image, i want to feel part of something new that fosters love and friendship before material judgement that thrives today.
     
 ### User Stories - Business Owner
 - #### Business story 1
-    1. I need the product to be fun and engaging to encourage repeat plays and encourage users to want more i.e. progress to the next level of learning. 
-    2. I need the product to be simple enough for children of age 6-12 to utilise it. 
-    3. I need it to be optimised for tablet screens as this is how it will mainly be tested.
+    1. I want to create a platform that cultivates a supportive and inclusive community, attracting a diverse range of users who value authenticity and meaningful connections. 
+    2. I want to implement measures to ensure the privacy and security of user data, building trust and confidence in the platform. 
+    3. I strive to create a sustainable and scalable platform, allowing for future growth and expansion while maintaining the core values and essence of Anam Cara.
 
 ## Design Choices
 
