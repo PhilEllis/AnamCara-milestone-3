@@ -140,17 +140,22 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 >#### Common Features Across All Pages
 - **Favicon** - 
-    - Expand
+    - a favicon of the symbol used throughout the site is visible on the site tab so that all users can easily navigate back to the site with ease when multiple tabs are open.
 - **Header** - 
-    - Expand
+    - Provide instant impression on the user but simple structure so as not to distract.
+    - I opted to use a slightly transparent navigation bar with a left aligned logo that links back to the home page. 
+    - The navigation elements are on the right and all links behave in the same way.
+    - The toggler provides the links to be displayed in a drop down manner on smaller view ports.
 - **Accessibility**
-    - Expand
+    - The hamburger menu has aria-label added to let users with screen readers know where the toggleable menu is.
+    - All colours have been contrast tested. 
 - **Buttons**
-    - Expand
+    - The same hover transition and colours have been applied to the buttons across all pages in order to create a cohesive look and make the call to action clear and easy to find. The font is the same for all buttons.
+    - When two buttons are close together one has been maintaned as a button and the other changed to an icon or a link to assist the user in differentiating between the two. 
 - **Responsiveness**
-    - Expand
+    - All Pages have been built around Bootstrap 5'S responsive grid layout and provide the same functionality regardless of the viewport size,
 - **Footer**
-    - Expand
+    - The footer consistent through the site provides an additional navigation option thought to be helpful on the longer pages. 
     
 
 
