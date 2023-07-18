@@ -203,24 +203,26 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 - [Git](https://git-scm.com/) 
 - [GitPod](https://www.gitpod.io/) 
+- [ElephantSQL](https://www.elephantsql.com/) Database management
+- [Heroku](https://heroku.com/) Hosting project application
+- [StackEdit](https://stackedit.io/) used to assist with markdown and structure
+- [Lucid](https://lucid.app/) used to create database flow
+- [DrawSQL](https://drawsql.app/) used to visualise the database structure
+- [Flask-Login](https://flask-login.readthedocs.io/en/latest/#login-example) Flask-login documentation
 - [Github](https://github.com/) 
+- [prettyprinted](http://prettyprinted.com/flaskcheatsheet) Flask Cheat sheet for reference
 - [Bootstrap v5](https://getbootstrap.com/) - Responsive Elements Hero, navigation, buttons & cards.
+- [Bootstrapmade](https://bootstrapmade.com/) - Bootstrap template site - used for base template for lists section and section titles.
 - [jquery](https://jquery.com/) - Used for the toggle function in the navigation
-- [Google Fonts](https://fonts.google.com/) - Play and Source Sans Pro fonts
-- [Font Awesome](https://fontawesome.com/) - Button icons.
+- [Google Fonts](https://fonts.google.com/) - Spectral Inter & Open Sans fonts
+- [Font Awesome](https://fontawesome.com/) - icons.
 - [Photoshop](https://www.adobe.com/ie/products/photoshop.html - images have been resized and edited within photoshop.
 - [Coloors](https://coolors.co/) - Used to create the colour palettes and identify complimentary and contrasting colours. This was also used to check the accessibilty of the text colour with each background colour during the planning stage. 
 - [RGBA Color Picker](https://rgbacolorpicker.com/hex-to-rgba) - to match hex colours to an RGBA so that i could change the apacity accurately.
-- [Istock](https://www.istockphoto.com/)- Istock used for all imagery within the site. image credit as follows
-     - [Galaxy Background](https://www.istockphoto.com/vector/space-background-with-realistic-nebula-and-shining-stars-colorful-cosmos-with-gm1173451503-325938376) image by Egor Suvorov from Istock
-     - [Planet Vectors](https://www.istockphoto.com/vector/glossy-planets-vector-set-gm453780213-30624312) Vector image by andegro4ka from Istock
-     - [Rocket Animation](https://www.istockphoto.com/video/ship-rocket-launch-startup-new-business-project-new-business-project-concept-vehicle-gm1249549420-364189430) created by Zozulinskyi from Istock
-- [youtube](https://www.youtube.com/watch?v=mQrlgH97v94) The Planet Song - 8 Planets of the Solar System Song for Kids | KidsLearningTube on Youtube 
-- [Fiver](https://www.fiverr.com/gemmawilson?source=inbox) Logo png files and favicon created by Gemma Wilson
+- [Istock](https://www.istockphoto.com/)- Istock used for all imagery within the site.
 - [Figma](https://www.figma.com/file/ladBUkKqWA50bv0xDRaMUH/SPLANETS?node-id=0%3A1&t=rRbFBuY40vnsdoR4-1) used to create mock up designs
-- [Balsamiq](https://balsamiq.com/wireframes/desktop/) Used to create the initial wireframes
 - [amiresponsive](https://ui.dev/amiresponsive) Used to create the live image capture of site
-
+https://lucid.app/
 <a name="#testing"></a>
 ## Testing
 
