@@ -1,70 +1,71 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- ======= Link To Add Note ======= -->
 <section id="notes-hero" class="d-flex align-items-center justify-content-center shadow">
-<div class="container-fluid">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-6">
-      <div class="card text-center mb-5 shadow">
-        <div class="card-header">
-          we invite you to
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Discover Soulful Connections</h5>
-          <p class="card-text">Embark on a journey of profound connection. Share your heartfelt whispers and discover 
-            soulful connections. If you haven't yet expressed the whispers in your heart, we invite you to do so now</p>
-          <a href="{{ url_for('add_note') }}" class="btn btn-outline-dark">Express your heart</a>
-        </div>
-        <div class="card-footer text-body-secondary">
-          <i class="fa-brands fa-centos fa-xl"></i>
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-6">
+        <div class="card text-center mb-5 shadow">
+          <div class="card-header">
+            we invite you to
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Discover Soulful Connections</h5>
+            <p class="card-text">Embark on a journey of profound connection. Share your heartfelt whispers and discover 
+             soulful connections. If you haven't yet expressed the whispers in your heart, we invite you to do so now</p>
+            <a href="{{ url_for('add_note') }}" class="btn btn-outline-dark">Express your heart</a>
+          </div>
+          <div class="card-footer text-body-secondary">
+            <i class="fa-brands fa-centos fa-xl"></i>
+          </div>
         </div>
       </div>
-    </div>
-  </div>  
-</div>
+    </div>  
+  </div>
 </section>
-
+<!-- End Link To Add Note -->
+<!-- ======= Display Note ======= -->
 <section id="notes-display" class="d-flex align-items-center justify-content-center">
-<div class="container">
-  <div class="row d-flex justify-content-center align-items-center mb-5">
-    {% for note in notes %}
-    <div class="col-10">
-      {% if note.publish_date|past_publish_date %}
-      <div class="card mt-5 mb-3 shadow">
-        <h5 class="card-header">{{ note.note_title }}</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{ note.note_name }}</li>
-          <li class="list-group-item">{{ note.submission_date }}</li>
-          <li class="list-group-item">{{ note.note_location }}</li>
-        </ul>
-        <div class="card-body">
-        <p class="card-text">{{ note.note_message }}</p>
-        </div>
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center mb-5">
+      {% for note in notes %}
+      <div class="col-10">
+        {% if note.publish_date|past_publish_date %}
+        <div class="card mt-5 mb-3 shadow">
+          <h5 class="card-header">{{ note.note_title }}</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{ note.note_connect }}</li>
+            <li class="list-group-item">{{ note.note_name }}</li>
+            <li class="list-group-item">{{ note.submission_date }}</li>
+            <li class="list-group-item">{{ note.note_location }}</li>
           </ul>
-        <div class="card-body d-flex justify-content-between">
-          <div>
-            {% if current_user.is_authenticated and current_user.id == note.user_id %}
-            <a href="{{ url_for('edit_note', note_id=note.id) }}" class="btn btn-outline-dark">Update</a>
-            {% endif %}
+          <div class="card-body">
+            <p class="card-text">{{ note.note_message }}</p>
           </div>
-          <i class="fa-brands fa-centos fa-xl"></i>
-          <div class="trash">
-            {% if current_user.is_authenticated and current_user.id == note.user_id %}
-            <a href="{{ url_for('delete_note', note_id=note.id) }}" class="card-link" data-bs-toggle="modal" data-bs-target="#deleteModal">
-            <i class="fa-regular fa-trash-can fa-xl"></i>
-            </a>
-            {% endif %}
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{ note.note_connect }}</li>
+            </ul>
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                {% if current_user.is_authenticated and current_user.id == note.user_id %}
+                <a href="{{ url_for('edit_note', note_id=note.id) }}" class="btn btn-outline-dark">Update</a>
+                {% endif %}
+              </div>
+              <i class="fa-brands fa-centos fa-xl"></i>
+              <div class="trash">
+                {% if current_user.is_authenticated and current_user.id == note.user_id %}
+                <a href="{{ url_for('delete_note', note_id=note.id) }}" class="card-link" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                <i class="fa-regular fa-trash-can fa-xl"></i>
+                </a>
+                {% endif %}
+              </div>
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
-      {% endif %}
-    </div>
     {% endfor %}
   </div>
 </div>
-
-<!-- Delete Modal -->
+<!-- ======= Delete Modal ======= -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -83,5 +84,5 @@
   </div>
 </div>
 </section>
-
+<!-- End Delete Modal -->
 {% endblock %}
