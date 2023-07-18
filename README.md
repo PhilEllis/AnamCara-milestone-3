@@ -185,8 +185,14 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 ## Anam Cara Future Iterations
 
-- 
-- 
+- The first iteration would be to improve the datepicker utilised. Currently the datepicker allows you to use dates in the past. This could be abused by users. To prevent this from happening the next iteration would include a customisable datepicker.
+- The option to customize the privacy settings of my messages, choosing whether they are publicly visible or restricted to a select group of individuals.
+- The platform to have the ability to facilitate the sharing of resources, recommendations, and uplifting content, allowing us to inspire and uplift each other in our personal journeys. So admin input. 
+- Notifications or reminders to revisit the platform and read new messages, ensuring that users miss out on the heartwarming and inspiring content shared by others.
+- The potential for users to have the ability to engage in meaningful discussions via a messenger element and provide support to others by commenting on their messages, fostering a sense of community and connection.
+- Anonymity Preference: Include a checkbox or toggle option for users to indicate whether they want their whispers to be anonymous or if they are comfortable with their name being associated with their submission.
+- Sharing Preference: Offer a selection for users to choose whether they want their whispers to be publicly visible to the community or if they prefer to keep them private, visible only to themselves or selected individuals.
+- Media Attachments (optional): Allow users to attach relevant photos, videos, or audio files that enhance their whispers. This could be images representing memories, artwork, or personal recordings.
 
 
 <a name="technologies"></a>
@@ -216,7 +222,7 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 - [jquery](https://jquery.com/) - Used for the toggle function in the navigation
 - [Google Fonts](https://fonts.google.com/) - Spectral Inter & Open Sans fonts
 - [Font Awesome](https://fontawesome.com/) - icons.
-- [Photoshop](https://www.adobe.com/ie/products/photoshop.html - images have been resized and edited within photoshop.
+- [Photoshop](https://www.adobe.com/ie/products/photoshop.html) - images have been resized and edited within photoshop.
 - [Coloors](https://coolors.co/) - Used to create the colour palettes and identify complimentary and contrasting colours. This was also used to check the accessibilty of the text colour with each background colour during the planning stage. 
 - [RGBA Color Picker](https://rgbacolorpicker.com/hex-to-rgba) - to match hex colours to an RGBA so that i could change the apacity accurately.
 - [Istock](https://www.istockphoto.com/)- Istock used for all imagery within the site.
@@ -267,6 +273,10 @@ If you wish to clone or download this repository to your local device you can fo
 >### Code 
 
 - The majority of the code originated from the Bootstrap library and was styled with custom css.
+- The core of the application has been derived from the code Institute Relational Database Walkthrough and amended to fit the needs of my application. 
+- [prettyprinted](https://www.youtube.com/watch?v=8aTnmsDMldY&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=72)The user authentication code has been modeled from and adapted suit the needs of this project. I found it hard to detail which changes came from this document but i have tried to be as clear as i can throughout the code. I did view all of his Flask videos and found it helped with understanding how flask-login worked alongside the other libraries.
+- [Bootstrapmade](https://bootstrapmade.com/) - I utilised a portion of html & css from the GP & Green templates for the lists section on the home page and the section titles on the home page and about page.
+- The models have been taken from bootstrap and the javascript used to initial them has been taken from a youtube video which i have now losted the link to but i wanted to make it clear it was not my own code.
 - All of the rest of the code was written by the author - Philippa Ellis
 
 
