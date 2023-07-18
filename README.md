@@ -1,18 +1,14 @@
 
 # Anam Cara
 
-<h1 align="center"><img src="/AnamcaraPreview.png"/></h1>
-![App Preview](documents/AnamcaraPreview.png)
-![App Preview](AnamcaraPreview.png)
+<h1 align="center"><img src="documents/AnamcaraPreview.png"/></h1>
 
-![App Preview](anamcarapreview.png)
 
-<a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="assets/img/splanetslogo.png" width="30px" /></a> Live website
-https://anam-cara-45d556e859ea.herokuapp.com/
+<a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="documents/anamcaral.png" width="30px" /></a> Live website
 
-<a href="https://github.com/PhilEllis/Splanets"><img src="assets/img/readmeimg/GitHub.png" width="30px" /></a> GitHub Repository
+<a href="https://github.com/PhilEllis/AnamCara-milestone-3/tree/main"><img src="documents/githublogo.png" width="30px" /></a> GitHub Repository
 
-<a href="https://github.com/PhilEllis/Splanets"><img src="assets/img/readmeimg/GitHub.png" width="30px" /></a> GitHub Repository
+<a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="documents/herokulogo.png" width="30px" /></a> GitHub Repository
 
 # Welcome to Anam Cara!
 
@@ -74,7 +70,7 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
     1. I don't want to provide a profile image, i want to feel part of something new that fosters love and friendship before material judgement that thrives today.
     
 ### User Stories - Business Owner
-- #### Business story 1
+- #### I am a business owner currently wishing to test the concept of an app that intends to work as the anti consumer driven social media that is seen today and instead build a space where a community and real connection can be fostered. I feel this would have a major impact on peoples wellbeing and mental health. 
     1. I want to create a platform that cultivates a supportive and inclusive community, attracting a diverse range of users who value authenticity and meaningful connections. 
     2. I want to implement measures to ensure the privacy and security of user data, building trust and confidence in the platform. 
     3. I strive to create a sustainable and scalable platform, allowing for future growth and expansion while maintaining the core values and essence of Anam Cara.
@@ -83,57 +79,59 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 >### Structure Considerations
 - #### Schema
-    - schema explanation
+    - Below is the reference table for the database schema - two tables. One for retaining the information of the message left of the note form and one for user authentication. 
 
-         <img src="assets/img/readmeimg/splanetssimplewireframe.png" />
+         <img src="documents/Databasemodel.png" />
 
 - #### Database Flow
-    - Database walkthrough
+    - The yellow element is the user arriving at the site. The diagram details the initial thought process behind what elements would be visible to the user prior to authentication (green elements) and what elements would need authentication to view (blue elements). This was drawn up with the user story request in mind to protect the users data messages but to give them control over their own content. 
 
-         <img src="assets/img/readmeimg/splanetssimplewireframe.png" />
+         <img src="documents/databaseflow.png" />
 
 - #### Wireframes
-    - After roughly sketching an idea of the rough structure i inputed this into Balsamiq to create the following basic wireframes.
+    - Referring to the database flow and i roughly sketched an idea of the rough structure. Which i then went on to progress in figma, as shown below. 
 
-         <img src="assets/img/readmeimg/splanetssimplewireframe.png" />
+        <img src="" />
 
 >### Aesthetic Considerations
 
 - #### Colour scheme
-    -  Considerations
+    -  In order to fulfil the brief of making this platform to provide a sense of serenity and tranquility and tying it in to the Irish Gaelic origin of the name i opted for a pallete of dark moody greens. accented by light greys and a pop of yellowy gold in order to add contrast and bring attention to features. It was important to me to have a lighter grey within the palette to utilise on forms and provide that clear definition and contrast for users when reading each others messages. When considering using a darker more moody theme throughout the site i was keen to ensure that it was still accessible. Coloors does help by indicating the contrast text colour but i referred to the slack channel a11y-accessibility for their thoughts and found a brilliant link to dark theme sites. From this i gleamed that a dark theme was fine but should be enhanced by using lighter areas to bring text forward and enhance reading. https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 
 
-        <img src="assets/img/readmeimg/splanetslargepalette.png" height="50px" />
+        <img src="documents/colourpallet.png" height="70px" />
 
-
-
-        <img src="assets/img/readmeimg/splanetssmallpalette.png" height="50px" />
 
 - #### Typography
-    - Considerations
+    - The main brand identifiable font used is Spectral - a unique google font that i felt captured the traditional nature of story telling with a slightly softer side to it. Achieving this whilst still being accessible and very readable. The secondary font for headings was intended to be Inter however there were not any sub header occasions. Open Sans as the main text font as it is very user friendly and accessible. Sans-serif has been chosen as a fall-back font.
    
 
-    - Play
+    - Spectral - for headings
        
-        <img src="assets/img/readmeimg/playfont.png" height="30px" />
+        <img src="documents/spectral.png" height="30px" />
+
+    
+    - Inter - for Sub headings although hardly used
+       
+        <img src="documents/inter.png" height="30px" />
 
 
-    - Source Sans Pro
+    - Open Sans - for the body
 
 
-        <img src="assets/img/readmeimg/sourcesansprofont.png" height="30px" />
+        <img src="documents/opensans.png" height="30px" />
 
 
 
 - #### Imagery
-    - Consideration
-
+    - I selected two images one of a man with his hand on his chest and one of a woman with her hands clasped in thought. I felt like both images conveyed the sentiment of the site and also worked well when overlaid with the dark green colour. Both images were sourced from Istock.
 >### Structure & Aesthetics Considered
 
 - #### Mockups
-    - Consideraations
+    - After selecting the brand colours and potential imagery and bearing in mind the advice read and received regarding darker themes i created a simple mock up of the project. The purpose of this was to guide me on my colour selection and placements. 
 
-        <img src="assets/img/readmeimg/imagemockup.png" />
+
+        <img src="documents/figmamockup.png" />
 
 <a name="features"></a>
 ## Features
