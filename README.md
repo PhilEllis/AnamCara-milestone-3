@@ -204,6 +204,27 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://www.javascript.com/)
+- jQuery 
+- Python - Providing the main backend development for this application.
+   - blinker==1.6.2
+   - click==8.1.4
+   - dnspython==2.4.0
+   - dominate==2.8.0
+   - email-validator==2.0.0.post2
+   - Flask==2.3.2
+   - Flask-Bootstrap==3.3.7.1
+   - Flask-Login==0.6.2
+   - Flask-SQLAlchemy==2.5.1
+   - Flask-WTF==1.1.1
+   - greenlet==2.0.2
+   - h11==0.14.0
+   - httpcore==0.17.3
+   - itsdangerous==2.1.2
+   - psycopg2==2.9.6
+   - SQLAlchemy==1.4.46
+   - visitor==0.1.3
+   - Werkzeug==2.3.6. 
+   - WTForms==3.0.1
 
 >### Frameworks, Libraries, Programs, Online Resources Used
 
@@ -238,34 +259,66 @@ https://lucid.app/
 <a name="deployment"></a>
 ## Deployment
 
+This project was created using the Code Institute Full template. Follow the link and select https://github.com/Code-Institute-Org/gitpod-full-template and then use this template and follow the normal steps to creating a new repository. 
+
 >### Publishing
-This website was published using [GitHub Pages] & Heroku (https://pages.github.com/). The procedure is outlined below.
-1. 
-2. 
-3. 
-4. 
-5.  
-6. 
-7. 
-8. 
+This website was published using [GitHub Pages] ElephantSQL & Heroku (https://pages.github.com/). The procedure is outlined below.
+1. Navigate to ElephantSQL.com and click “Get a managed database today”
+2. Select the relevant option - we currently have the Tiny turtle free plan.
+3. Select “Log in with GitHub” and authorize ElephantSQL with your selected GitHub account
+4. In the Create new team form:
+    - Add a team name (your own name is fine)
+    - Read and agree to the Terms of Service
+    - Select Yes for GDPR
+    - Provide your email address 
+    - Click “Create Team”
+5.  Create Database, Click “Create New Instance” & set up your plan;
+    - Give your plan a Name (this is commonly the name of the project)
+    - Select the Tiny Turtle (Free) plan
+    - You can leave the Tags field blank
+6. Select “Select Region”, Select a data center near you then click “Review”
+7. Check your details are correct and then click “Create instance”
+8. Return to the ElephantSQL dashboard and click on the database instance name for this project
+9. In the URL section, clicking the copy icon will copy the database URL to your clipboard
+
+>### Deploying with Heroku
+
+1. In GitPod CLI, the root directory of the project, run:
+    pip freeze --local > requirements.txt
+    to create a requirements.txt file containing project dependencies.
+2. Create Procfile folder ensuring capital P in the route directory.
+     - Enter web: python run.py within the file
+     - Ensure you do not add a blank line to the end of the file as this can cause problems for deployment.
+3. Push your two 2 new files to your GitHub repository
+4. Login to Heroku, select Create new app, add the name of your app and select your nearest region.
+5. Go to the settings tab, click reveal config vars and input the following:
+
+
+<img src="documents/ConfigVars1.png" />
+
+6. Ensure NOTE to enter DEVELOPMENT and DB_URL from the env.py file as a Config Var. 
+7. Go to the “Deploy” tab of your app In the Deployment method section, select “Connect to GitHub
+8. Search for your repository 
+9. You now have the option to select 'Enable Automatic Deploys'
+10. Click deploy Main
+11. click the “More” button and select “Run console this is to migrate the tables from our database;
+      - Type python3 into the console and click Run
+      - from notemanager import db
+      - db.create_all()
+      - exit()
+      - Please note any additional changes will need to be migrated.
 
 >### Forking
 If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Navigate to the relevant GitHub Repository
+2. Click on the 'Fork' button at the top right of the page
+3. This will duplicate the project for you to work on
 
 >### Cloning 
 If you wish to clone or download this repository to your local device you can follow the procedure outlined below.
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
-7. To create your local clone press `Enter`
+1. Navigate to the relevant Got Hub Repository
+2. Click on 'Code' and then 'Download Zip' from the drop down. You can then open with an IDE or Copy the URL from the top box
+3. If copying the code open your development editor & in the terminal use the 'Git Clone' command followed by the above URL to create a clone of the project locally.
 
 <a name="credits"></a>
 ## Credits
