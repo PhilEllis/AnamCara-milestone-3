@@ -7,6 +7,7 @@ from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField
 from wtforms.validators import InputRequired, Email, Length
+from flask_migrate import Migrate
 
 if os.path.exists("env.py"):
     import env  # noqa
@@ -32,6 +33,9 @@ else:
     app.config["SQLALCHEMY_DATABASE_URI"] = uri
 
 db = SQLAlchemy(app)
+
+
+migrate = Migrate(app, db)
 
 
 def past_publish_date(date_string):
