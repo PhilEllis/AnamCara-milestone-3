@@ -53,36 +53,38 @@
               <i class="fa-brands fa-centos fa-xl"></i>
               <div class="trash">
                 {% if current_user.is_authenticated and current_user.id == note.user_id %}
-                <a href="{{ url_for('delete_note', note_id=note.id) }}" class="card-link" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                <i class="fa-regular fa-trash-can fa-xl"></i>
-                </a>
+                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#deleteModal_{{ note.id }}">
+                  <i class="fa-regular fa-trash-can fa-xl"></i>
+                  </a>
                 {% endif %}
               </div>
             </div>
           </div>
         {% endif %}
       </div>
+      <!-- ======= Delete Modal for each note ======= -->
+      <div class="modal fade" id="deleteModal_{{ note.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteModalLabel">Delete Note</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete this note?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <form action="{{ url_for('delete_note', note_id=note.id) }}" method="POST">
+                <button type="submit" class="btn btn-danger" id="deleteNoteBtn">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Delete Modal for each note -->
     {% endfor %}
   </div>
 </div>
-<!-- ======= Delete Modal ======= -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Delete Note</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to delete this note?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <a href="#" class="btn btn-danger" id="deleteNoteBtn">Delete</a>
-      </div>
-    </div>
-  </div>
-</div>
 </section>
-<!-- End Delete Modal -->
 {% endblock %}
