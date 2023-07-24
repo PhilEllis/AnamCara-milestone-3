@@ -157,6 +157,7 @@ h6 {
   .section-title {
     text-align: center;
     padding-bottom: 50px;
+    padding-top: 70px;
   }
   
   .section-title h2 {
@@ -206,6 +207,7 @@ h6 {
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   background: rgba(162, 169, 158, 1);
+  margin-bottom: 50px;
 }
 
 .links .icon-box .icon {
@@ -264,6 +266,7 @@ h6 {
 
   #quotes .card {
     background-color: rgba(209, 209, 209, 0.7);
+    margin-bottom: 70px;
   }
 
   #quotes .quotes-symbol {
