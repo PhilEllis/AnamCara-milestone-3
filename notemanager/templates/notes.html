@@ -3,8 +3,20 @@
 <!-- ======= Link To Add Note ======= -->
 <section id="notes-hero" class="d-flex align-items-center justify-content-center shadow">
   <div class="container-fluid">
+    <!-- Block to display flashed messages -->
+<div class="flashed-messages">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+</div>
     <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-6">
+      <div class="col-lg-6 col-md-8">
         <div class="card text-center mb-5 shadow">
           <div class="card-header">
             we invite you to
