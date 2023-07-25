@@ -4,6 +4,17 @@
 <!-- ======= Login Form ======= -->
 <section id="notes-login" class="d-flex align-items-center justify-content-center">
   <div class="container">
+    <div class="flashed-messages">
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li> 
+              {% endfor %}
+            </ul>
+          {% endif %}
+      {% endwith %}
+  </div>
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-10 form-margin">
         <div class="card shadow">

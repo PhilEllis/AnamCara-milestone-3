@@ -484,3 +484,7 @@ h6 {
 .flashed-messages li {
     margin-bottom: 5px;
 }
+
+#notes-login .flashed-messages {
+  left: 15%;
+}
