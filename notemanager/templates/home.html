@@ -3,6 +3,17 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center justify-content-center shadow">
   <div class="container-fluid">
+    <div class="flashed-messages">
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li> 
+              {% endfor %}
+            </ul>
+          {% endif %}
+      {% endwith %}
+  </div>
     <div class="row justify-content-center text-center">
       <div class="col-xl-6 col-lg-8">
         <h1>Discover the Power of Heartfelt Connection. Embrace the Whispers Within. <br>Journey with Anam Cara</h1>

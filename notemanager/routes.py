@@ -89,6 +89,7 @@ def signup():
 def logout():
     """Handle user logout."""
     logout_user()
+    flash('You have successfully logged out.', 'success')
     return redirect(url_for('home'))
 
 
