@@ -59,6 +59,7 @@ def login():
         if user:
             if check_password_hash(user.password, form.password.data):
                 login_user(user, remember=form.remember.data)
+                flash('You have successfully logged in!', 'success')
                 return redirect(url_for('notes'))
 
         return '<h1>Invalid username or password</h1>'
