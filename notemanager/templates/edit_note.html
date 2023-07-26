@@ -7,11 +7,11 @@
       <div class="col-10 form-margin">
         <div class="card text-center shadow">
           <div class="card-header">
-            Featured
+            Heartfelt Whispers
           </div>
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">Embrace Authentic Expression and Soulful Connections</h5>
+            <p class="card-text">Unleash Your Inner Voice! Share your story, express your thoughts, and forge meaningful connections</p>
             <form method="POST" action="{{ url_for('edit_note', note_id=note.id) }}">
             <!-- note_name -->
             <div class="row mb-3">
@@ -54,14 +54,14 @@
             <div class="row mb-3">
               <label for="note_message" class="col-sm-2 col-form-label">Message</label>
               <div class="col-sm-10">
-                <textarea name="note_message" type="text" value="{{ note.note_message }}" class="form-control" id="note_message" rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
+                <textarea name="note_message" type="text" value="{{ note.note_message }}" class="form-control" id="note_message" placeholder="Share what is in your heart..." rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
               </div>
             </div>
             <!-- note_connect -->
             <div class="row mb-3">
               <label for="note_connect" class="col-sm-2 col-form-label">Connect</label>
               <div class="col-sm-10">
-                <input name="note_connect" type="text" value="{{ note.note_connect }}" class="form-control" id="note_connect" required minlength="3" maxlength="70">
+                <input name="note_connect" type="text" value="{{ note.note_connect }}" class="form-control" id="note_connect" placeholder="How can kindered souls connect with you..." required minlength="3" maxlength="70">
               </div>
             </div>
             <!-- publish_date -->
