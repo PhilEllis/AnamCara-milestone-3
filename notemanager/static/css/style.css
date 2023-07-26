@@ -139,7 +139,8 @@ h6 {
 
   #notes-hero .card {
     background-color: rgba(201, 202, 200, 1);
-    margin-top: 150px;
+    margin-top: 200px;
+    margin-bottom: 100px;
   }
 
   #notes-hero .btn {
