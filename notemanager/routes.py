@@ -131,6 +131,10 @@ def add_note():
         )
         db.session.add(note)
         db.session.commit()
+
+        flash(("Whisper submitted! Messages published at 00:00 GMT the day"
+               " after the selected publish date"), "success")
+
         return redirect(url_for("notes"))
     return render_template("add_note.html")
 
