@@ -26,15 +26,23 @@ def load_user(user_id):
 
 class LoginForm(FlaskForm):
     """Form for user login."""
-    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
-    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
+    username = StringField(
+        'username', validators=[InputRequired(), Length(min=4, max=15)]
+    )
+    password = PasswordField(
+        'password', validators=[InputRequired(), Length(min=8, max=80)]
+    )
     remember = BooleanField('remember me')
 
 
 class RegisterForm(FlaskForm):
     """Form for user registration."""
-    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
-    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
+    username = StringField(
+        'username', validators=[InputRequired(), Length(min=4, max=15)]
+    )
+    password = PasswordField(
+        'password', validators=[InputRequired(), Length(min=8, max=80)]
+    )
 
 
 @app.route("/")
@@ -77,12 +85,15 @@ def signup():
     form = RegisterForm()
 
     if form.validate_on_submit():
-        hashed_password = generate_password_hash(form.password.data, method='sha256')
+        hashed_password = generate_password_hash(
+            form.password.data, method='sha256'
+        )
         new_user = User(username=form.username.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
 
-        flash('Welcome, {}! You have successfully signed up. Please login.'.format(new_user.username), 'success')
+        flash(('Welcome, {}! You have successfully signed up. '
+               'Please login.').format(new_user.username), 'success')
         return redirect(url_for('login'))
     return render_template('signup.html', form=form)
 
