@@ -61,9 +61,12 @@ def login():
                 login_user(user, remember=form.remember.data)
                 flash('You have successfully logged in!', 'success')
                 return redirect(url_for('notes'))
-
-        return '<h1>Invalid username or password</h1>'
-        # return '<h1>' + form.username.data + ' ' + form.password.data + '</h1>'
+            else:
+                flash('Invalid username or password', 'danger')
+                return redirect(url_for('login'))
+        else:
+            flash('Invalid username or password', 'danger')
+            return redirect(url_for('login'))
 
     return render_template('login.html', form=form)
 
