@@ -176,3 +176,7 @@ http://jigsaw.w3.org/css-validator/validator$link
 - The addition of the Delete Modal in the notes.html allowing the bootstrap modal to pop up when the trash can icon was selected appeared to create a bug within the code. On closer inspection the Delete Modal was not within the for loop and it did not have not_id associated with it. This was picked up by Jason on tutoring support. Once the issue was discovered I moved the Delete modal into the for loop, setting the delete button to call the delete route and pass the note_id value. This rectified the delete bug and restored the Delete function.
 
 - All Flash messages functioned as expected apart from the flash to flag an invalid username or password at login. This was resolved by duplicating the else statement to show the message for both an incorrect username or password without disclosing to the user which field was inputted incorrectly.
+
+- I experienced issues with implementing a Jinja Templating filter to allow the messages to appear in reverse order. After further research i discovered to effect this change i only needed to make a change within the routes.py file, creating a descending query order. 
+
+- Initially the form was not passing the submission date information to the database. On further inspection the name, ID & value had an extra note_ at the start of them. This was removed and the input functioned correctly. 
