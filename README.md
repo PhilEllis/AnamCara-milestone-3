@@ -175,10 +175,19 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 -  **Notes/Connect**
     - Card displaying link and info to encourage user to login or sign up to create a message
     - Display of all of the messages left so far that can be scrolled through.
+        <image src="documents/heartwhisper.png" />
     - If logged in certain notes will have update and delete buttons available to the user who submitted the message
 -  **add_note/Express&edit_note**
     - Redirects user to login if not already logged in
     - displays the note form to allow the user to submit their message and details
+    - The form fields have been created with the user stories and ethos of the brand in mind. These have been explained below;
+        - Name - Rather than auto filled with their username this has been left as a free text field for whatever name they wish to use allowing annonymity if it is wanted.
+        - For location I opted to allow a selection of continents - this felt more in line with the value of interconnectedness that the brand strives to create. Not being zoned into country borders but instead able to convey a rough location on the planet. 
+        - Today's date allows the reader to understand when the note was written and acts as a refernce point for the user re reading their published messages. Allowing them to reflect.
+        - Title - This is more for the reader and allows them a quick glance to see if the message is on a topic they resonate with before reading it in full. 
+        - Message a section to share their hearts whispers with everyone with placeholder text to encourage them to do so. this section has been restricted to a minimum of 100 characters. This is potentially longer than the normal text area requirement but is in line with the level of connection that Anam Cara wants to create. This requirement should help encourage users to fully express themselves and help create the quality experience for other readers.
+        - Publish Date - This is to allow users to schedule their post to a future date that could be tomorrow or a date that resonates with them and the memory that they are sharing. This feature is provided in order to help remove the immediacy of normal social media and create that joyful experience of being able to log back in and read through the messages released that day. 
+        <img src="documents/expressform.png" />
 -  **login**
     - login form
     - links to sign up 
@@ -193,6 +202,8 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 ## Anam Cara Future Iterations
 
 - The first iteration would be to improve the datepicker utilised. Currently the datepicker allows you to use dates in the past. Although this is in keeping with the less restrictive ethos of the site and aligned with allowing the users to choose dates that resonate with them, this feature could be abused by users to have their messages published early by inputting retrospective dates. To prevent this from happening the next iteration would include a customisable datepicker that would restrict access to past dates.
+- I also feel that the scheduling or messaging around the release of notes would need to be improved as per user feedback. Currently once the message is submitted a flash message appears to communicate that the message will be released at 00:00hrs GMT after the publish date. I feel this may need to be changed to be released 00:00hr GMT on the day of the selected Publish date or communication left within the form so that the user is aware and can edit the publish date accordingly. 
+- I feel that confirmation feed back should be given to the user to confirm the edit or deletion of a note has been successful. This would be the next feature to be implemented as i feel it would improve the user experience.
 - A personal Dashboard would be created to allow users to see their messages pending or posted in one place. This dashboard would allow users to update or delete their messages before the publish date. This would be an improvement on the current model of having to wait for the publish date in order to access the message to edit or delete. 
 - An option to edit account details such as changing username, password resets and adding a linked email. This would assist users to increase account security but also allow the business to build their customer email database.
 - The option to customize the privacy settings of my messages, choosing whether they are publicly visible or restricted to a select group of individuals.
