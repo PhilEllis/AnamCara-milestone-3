@@ -349,9 +349,9 @@ If you wish to clone or download this repository to your local device you can fo
 
 >### Code 
 
-- The majority of the code originated from the Bootstrap library and was styled with custom css.
-- The core of the application has been derived from the code Institute Relational Database Walkthrough and amended to fit the needs of my application. 
-- [prettyprinted](https://www.youtube.com/watch?v=8aTnmsDMldY&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=72)The user authentication code has been modeled from and adapted suit the needs of this project. I found it hard to detail which changes came from this document but i have tried to be as clear as i can throughout the code. I did view all of his Flask videos and found it helped with understanding how flask-login worked alongside the other libraries.
+- The majority of the html code originated from the Bootstrap library and was styled with custom css.
+- The core of the application has been derived from the code Institute Relational Database Walkthrough and amended to fit the needs of my application. This includes the add_note, edit_note & delete_note functions The base of the code was taken from the walkthrough and edited to fit the functionality of this app. I have referenced it here instead of the routes.py as i belived it to be too messy and disturn the code on the .py file.
+- [prettyprinted](https://www.youtube.com/watch?v=8aTnmsDMldY&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=72)The user authentication code has been modeled from and adapted suit the needs of this project. I found it hard to detail which changes came from this video without disrupting the flow of the code so have referenced it here instead. The Login, logout and sign up functions and use of WTForms has been based on this walkthrough and edited to suit the needs of this app. I did view all of his Flask videos and found it helped with understanding how flask-login worked alongside the other libraries.
 - [Bootstrapmade](https://bootstrapmade.com/) - I utilised a portion of html & css from the GP & Green templates for the lists section on the home page and the section titles on the home page and about page.
 - The models have been taken from bootstrap and the javascript used to initial them has been taken from a youtube video which i have now losted the link to but i wanted to make it clear it was not my own code.
 - All of the rest of the code was written by the author - Philippa Ellis

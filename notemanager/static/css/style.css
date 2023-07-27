@@ -9,7 +9,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #1C1C1C;
 }
 
 a {
@@ -135,7 +135,7 @@ h6 {
   position: relative;
   margin-left: 0;
   margin-right: 0;
-  color: #ADAA99;
+  color: #7A7462;
 }
 
 #notes-hero .card {
@@ -170,7 +170,7 @@ h6 {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #1f1f1f;
+  color: #0F0F0F;
 }
   
 .section-title h2::before {
@@ -196,7 +196,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Services - taken from BootstrapMade ref in README.md
+# links - taken from BootstrapMade ref in README.md
 --------------------------------------------------------------*/
 #links {
   background-color: rgba(90, 99, 84, 1);
@@ -293,7 +293,7 @@ h6 {
   font-family: "Spectral", sans-serif;
   font-weight: 600;
   margin-bottom: 25px;
-  color: #ffd584;
+  color: #FFD685;
 }
 
 #recap i {

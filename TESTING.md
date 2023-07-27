@@ -110,16 +110,60 @@ Cyclomatic complexity number for this function is 1.
 
 <a name="#python"></a>
 ## Python validator
-- 
-- 
-  
+- routes.py - All clear, no errors found
+
+<img src="documents/routes.png" height="200px"/>
+
+- models.py - All clear, no errors found
+
+<img src="documents/models.png" height="200px"/>
+
+- __init__.py - All clear, no errors found
+
+<img src="documents/init.png" height="200px"/>
+
+- run.py - All clear, no errors found
+
+  <img src="documents/run.png" height="200px"/>
+
+- env.py - All clear, no errors found
+
+
 <a name="#access"></a>
 ## Accessibility
 
 ### Lighthouse testing
-- <img src="assets/img/readmeimg/indexlighthousetest.png"/>
-- 
-- <img src="assets/img/readmeimg/gamelighthousetest.png" />
+- At the time of testing Lighthouse would not complete its warm up on the local server or the Heroku deployed app so wave was utilised instead
+
+### Wave testing
+- Wave testing highlighted several contrasting issues with Home page and about page Hero and Recap areas text. Now initially I used the contrast tool to evaluate what Hex colour would pass and applied those colours to the text areas in question. On inspecting these areas after the changes were made they passed the wave contrast checker but I strongly felt that the text was less readable. I have provided screenshots of the before and after of these sections for you in order to demonstrate the change and why I chose to go against the contrast guidance from Wave. I also read within the Wave checker that “WAVE does not detect contrast of background gradients, transparency, etc. For background images, WCAG requires a fallback background color in case the image does not display” I believe that Wave has not been able to read the background accurately enough to assess the correct contrast for the text areas in question. There are currently No erros present only Contrasting errors as detailed below.
+
+    - Changes I have made based on wave testing 
+        - aria-label="Scroll to next section" Added to both downward chevrons on home and about
+        - Section title from #1f1f1f to #0F0F0F
+        - Body text from #444444 to #1C1C1C
+    - Changes i trialed and chose to revert to the before images;
+        - Hero & Recap text for the home and about page changed from #ADAA99 to #7A7462 
+        
+        Before 
+        
+        <img src="documents/herobefore.png" height="200px"/> 
+        
+        After
+        
+        <img src="documents/heroafter.png" height="200px"/>
+
+
+        - Title Anam Cara in the recap section of home and about from #FFD685 to #946800.
+
+        Before
+
+        <img src="documents/recapbefore.png" height="200px"/>
+        
+        After
+
+        <img src="documents/recapafter.png" height="200px"/>
+
 
 
 <a name="#compatibility"></a>
