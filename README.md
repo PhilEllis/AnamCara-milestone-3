@@ -8,7 +8,7 @@
 
 <a href="https://github.com/PhilEllis/AnamCara-milestone-3/tree/main"><img src="documents/githublogo.png" width="30px" /></a> GitHub Repository
 
-<a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="documents/herokulogo.png" width="30px" /></a> GitHub Repository
+<a href="https://anamcara-605224a27f19.herokuapp.com/"><img src="documents/herokulogo.png" width="30px" /></a> Heroku Repository
 
 # Welcome to Anam Cara!
 
