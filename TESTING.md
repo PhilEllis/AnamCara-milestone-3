@@ -100,8 +100,13 @@ One Warning - line 4 - Imported style sheets are not checked in direct input and
 
 <a name="#js"></a>
 ## Javascript validator
-- 
-- 
+- Reported Metrics - 
+There is only one function in this file.
+It takes no arguments.
+This function contains 3 statements.
+Cyclomatic complexity number for this function is 1.
+
+<img src="documents/jsvalidation.png" />
 
 <a name="#python"></a>
 ## Python validator
