@@ -88,11 +88,16 @@ One Warning - line 4 - Imported style sheets are not checked in direct input and
 
 <a name="#html"></a>
 ## HTML5 validator
-- base.html - Passed with removal of all Jinja Templating and Static URLS
-- home.html - Passed with removal of all Jinja templating and Static URLS with warnings regarding missing doctype contained in the base.html
-- About.html - Passed with removal of all Jinja templating with warnings regarding missing doctype contained in the base.html
-- 
+- base.html - Passed using HTML from View Page Source to remove Jinja Templating and Statci urls.
+- home.html - Passed using HTML from View Page Source to remove Jinja Templating and Statci urls.
+- about.html - Passed using HTML from View Page Source to remove Jinja Templating and Statci urls.
+- add_note.html - Passed after some form editing - used HTML from View Page Source to remove Jinja Templating and Statci urls.
+- edit_note.html - Passed after some form editing - used HTML from View Page Source to remove Jinja Templating and Statci urls.
+- login.html - Passed using HTML from View Page Source to remove Jinja Templating and Statci urls.
+- signup.html - Passed using HTML from View Page Source to remove Jinja Templating and Statci urls
 <img src="documents/htmlvalidator.png" />
+
+
 <a name="#js"></a>
 ## Javascript validator
 - 
