@@ -68,7 +68,7 @@
               <i class="fa-brands fa-centos fa-xl"></i>
               <div class="trash">
                 {% if current_user.is_authenticated and current_user.id == note.user_id %}
-                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#deleteModal_{{ note.id }}">
+                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#deleteModal_{{ note.id }}" aria-label="Scroll to next section">
                   <i class="fa-regular fa-trash-can fa-xl"></i>
                   </a>
                 {% endif %}
