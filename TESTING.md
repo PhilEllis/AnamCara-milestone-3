@@ -150,7 +150,7 @@ http://jigsaw.w3.org/css-validator/validator$link
 
 - From user story 3;
     - There is a free text section where people can choose to input their contact details or choose to leave it blank - this is the only field within the form that is not required in order to fulfil this user request.
-    - The delayed posting/schedule feature of the messages and once a day release of the scheduled posts fosters the slow reading and once a day visits rather than endless scrolling. 
+    - The delayed posting/schedule feature of the messages and once a day release of the scheduled posts fosters the slow reading and once a day visits rather than endless scrolling. The newest messages appear at the top to ensure users are not scrolling through countless messages to review the most recent.
     - Comments are not enabled in this version and contact details are optional to share limiting trolls or attacks on certain posts. 
     - The messages and profiles have been kept image free to foster love and friendship at a spiritual level before material judgement
 
@@ -165,6 +165,14 @@ http://jigsaw.w3.org/css-validator/validator$link
 <a name="bugs"></a>
 ## Known Bugs
 
+- At the time of submission there are no known bugs within the site.
 
 
 ## Bugs & challenges experienced during the build
+
+
+- The largest challenge faced was the inability to migrate my database changes half way through the build. I built out the basic CRUD function first and foremost and only when i was happy with that did i attempt to add user authentication. The additional table for the user data migrated organically through git push however the additional user_id column added to the original Note table did not migrate. After endless attempts to update and migrate the database to Heroku/ElephantSQL i took the decision to delete the ElephantSQL instance and Heroku App and work through the deployment steps again. This has fixed the bug. Deletion of Heroku & ElephantSQL linked to your app is not recommended due to the data loss implications, however in this instance the data base was blank and so posed not risk to the build. 
+
+- The addition of the Delete Modal in the notes.html allowing the bootstrap modal to pop up when the trash can icon was selected appeared to create a bug within the code. On closer inspection the Delete Modal was not within the for loop and it did not have not_id associated with it. This was picked up by Jason on tutoring support. Once the issue was discovered I moved the Delete modal into the for loop, setting the delete button to call the delete route and pass the note_id value. This rectified the delete bug and restored the Delete function.
+
+- All Flash messages functioned as expected apart from the flash to flag an invalid username or password at login. This was resolved by duplicating the else statement to show the message for both an incorrect username or password without disclosing to the user which field was inputted incorrectly.
