@@ -6,7 +6,6 @@
 ## Table of Contents
 
 - [Test Record](#testrecord)
-- [Functionality](#functionality)
 - [CSS3 Validator](#css)
 - [HTML5 Validator](#html)
 - [JavaScript Validator](#js)
@@ -60,11 +59,11 @@ Express page | Header Nav links & Logo Text clicked |  User taken to respective 
 Express page | User not logged in - Navigate to Express page | Login form shown with invitation to login to view page | Works as expected
 Express page | User logged in - Navigate to Express page | Express form shown | Works as expected
 Express page | User inputs Text into Name field | Data Enters min 3 - max 60 and required elements flagged when not met or exceeded | Works as expected
-Express page | User selects continent | Data Entered - required elements flagged when not met | Works as expected
+Express page | User selects Continent | Data Entered - required elements flagged when not met | Works as expected
 Express page | User selects Today's Date | Date Entered - required elements flagged when not met | Works as expected
 Express page | User inputs text into Title field | Data Enters min 5 - max 60 and required elements flagged when not met or exceeded | Works as expected
-Express page | User inputs text into Title field | Data Enters min 100 - max 1000 and required elements flagged when not met or exceeded | Works as expected
-Express page | User inputs text into Title field | Data Enters min 3 - max 70 and required elements flagged when not met or exceeded | Works as expected
+Express page | User inputs text into Message field | Data Enters min 100 - max 1000 and required elements flagged when not met or exceeded | Works as expected
+Express page | User inputs text into Connect field | Data Enters min 3 - max 70 elements flagged when not met or exceeded | Works as expected
 Express page | User selects Publish Date | Date Entered - required elements flagged when not met | Works as expected
 Login page| Size to 320px using Chrome Dev Tools	| Elements look good @ 320px | Works as expected
 Login page| Size to 1920px using Chrome Dev Tools | Elements look good 1920px | Works as expected
@@ -80,13 +79,6 @@ Sign Up page| Header Nav links & Logo Text clicked |  User taken to respective c
 Sign Up page| User inputs username and password | user redirected to login page saying success and inviting them to use their new credentials to login | Works as expected - Database checked password is successfully hashed
 Logout NavBar Button| Logged in user clicks to logout | User logged out and redirected to the home page successful logout message displayed | Works as expected
 
-
-<a name="#functionality"></a>
- ## Functionality Testing
- 
-- 
-- 
-- 
 
 <a name="#css"></a>
 ## CSS3 validator - Pass
@@ -134,16 +126,40 @@ http://jigsaw.w3.org/css-validator/validator$link
 <a name="#user"></a>
 ## Testing User Stories 
 >### External testing
-- 
-- 
+- All testers confirmed that they coud sign up, login and logout.
+- All testers confirmed that all buttons and navigation links performed the correct function.
+- All testers confirmed that the forms submitted and messages displayed correctly.
+- All testers confirmed that they could read messages, update and delete their messages.
+
 >### User Stories - Customer
-- 
-- 
+- From user story 1;
+    - Community message board created providing a space for likeminded individuals to connected and foster meaningful and supportive interactions.
+    - Users able to login and edit or delete messages should they change their mind.
+    - Users able to scroll through the message board to read and reflect on their previous messages and personal growth.
+    - the implementation of a 100 minimum requirement within the text area means that the user needs to take their time and really express in detail how they are feeling rather than quick messages with no thought behind them. The selection of a Publish Date takes the immediacy out of the posting. Both of these elements work together to create a slower less intrusive way of expressing yourself and connecting.
+
+
+
+- From user story 2;
+     - The structure of the site has been kept to a traditional interface meaning that the user does not have to think about how they navigate to where they want to go. Nav links at the top and the bottom of the page along with the Discover links funnel the user to the correct pages. All restricted pages invite the user to login and once the user has actioned logging in, out, signing up or submitting, updating or deleting a message they are redirected intuitively to relevant next page for them.
+    - The selected Publish date allows users to choose when they publish their message.
+    - The Colour palette has been specifically chosen to create a tranquil peaceful experience whilst still retaining the modern Celtic vibe in line with the brand. The use of colours behind the messages and lack of imagery mean that the messages remain the focus of the connect page.
+    - There is a free text section where people can choose to input their contact details or choose to leave it blank - this is the only field within the form that is not required in order to fulfil this user request.
+
+
+
+- From user story 3;
+    - There is a free text section where people can choose to input their contact details or choose to leave it blank - this is the only field within the form that is not required in order to fulfil this user request.
+    - The delayed posting/schedule feature of the messages and once a day release of the scheduled posts fosters the slow reading and once a day visits rather than endless scrolling. 
+    - Comments are not enabled in this version and contact details are optional to share limiting trolls or attacks on certain posts. 
+    - The messages and profiles have been kept image free to foster love and friendship at a spiritual level before material judgement
 
 
 >### User Stories - Business Owner
-- 
-- 
+-  The brand ethos and values have been incorporated into the messaging styling of the site. All users stories have been met to create the requested type of environment where the user would feel safe to freely make meaningful connections.
+- All passwords have been hashed for security. There are elements of defensive programming protecting the user from accidentally deleting their own content and we have implemented user authorisation for access to the update and delete functions of the messages. 
+- The beta test version of Anam Cara captures its core values and provides the raw facility needed to post messages and start garnering a community. This provides the business with the ability to watch how their community utilises the site and listen to feedback about additional features the community would like. Creating a solid base allows the business to equate what features they can add and use to scale the community in a sustainable way. 
+
 
 
 <a name="bugs"></a>
