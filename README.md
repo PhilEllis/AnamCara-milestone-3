@@ -4,7 +4,7 @@
 <h1 align="center"><img src="documents/AnamcaraPreview.png"/></h1>
 
 
-<a href="https://anam-cara-45d556e859ea.herokuapp.com/"><img src="documents/anamcaral.png" width="30px" /></a> Live website
+<a href="https://anamcara-605224a27f19.herokuapp.com/"><img src="documents/anamcaral.png" width="30px" /></a> Live website
 
 <a href="https://github.com/PhilEllis/AnamCara-milestone-3/tree/main"><img src="documents/githublogo.png" width="30px" /></a> GitHub Repository
 
@@ -21,9 +21,9 @@ It has become a symbol of the profound and transformative nature of genuine frie
 
 The concept of Anam Cara emphasizes the importance of fostering authentic relationships and recognizing the interconnectedness of all beings. It invites us to cultivate deep connections, engage in soulful conversations, and cherish the bonds that nourish our spirits. Anam Cara serves as a reminder of the value of genuine friendship and the power it holds in our personal and spiritual journeys.
 
-Functionally, Anam Cara is striving to provide a platform for users to authentically express their inner thoughts, desires, and memories in a mindful and heartfelt manner. The beta version of the site allows users to create an account, login, and leave their messages termed ‘Express their hearts whispers’.
+Functionally, Anam Cara is striving to provide a platform for users to authentically express their inner thoughts, desires, and memories in a mindful and heartfelt manner. The beta version of the site allows users to create an account, login, and leave their messages termed ‘Express Your Heartfelt whispers’.
 
-Anam Cara incorporates a unique feature where users can choose to schedule their message for publication on a specific date. This feature aligns with the concept of creating a slower, more intentional experience, rather than instant gratification. Once a day, Anam Cara scans the database and releases the scheduled messages for that day, with the newest messages appearing first. This approach encourages users to anticipate and appreciate the heartfelt messages each day, fostering a sense of connection and reflection. Users are invited to ‘Discover soulful connections ‘ by reading the published messages.
+Anam Cara incorporates a unique feature where users can choose to schedule their message for publication after a specific date. This feature aligns with the concept of creating a slower, more intentional experience, rather than instant gratification. Once a day, Anam Cara scans the database and releases the scheduled messages for that day, with the newest messages appearing first. This approach encourages users to anticipate and appreciate the heartfelt messages each day, fostering a sense of connection and reflection. Users are invited to ‘Discover soulful connections ‘ by reading the published messages.
 
 The site also provides users with the ability to login and edit or delete their published messages. This empowers users to have control over their content and allows for any necessary updates or adjustments to be made.
 
@@ -52,7 +52,7 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 ## User Stories - 
 - #### story 1
     1. I want to connect with like-minded individuals who resonate with my messages, fostering meaningful conversations and supportive interactions.
-    1. I want to be able to login and edit or delete my messages should i chnge my mind.
+    1. I want to be able to login and edit or delete my messages should i change my mind.
     1. I want to be able to revisit and reflect upon my past messages, witnessing my personal growth and evolution over time.
     1. I want this to provide me with a slower less intrusive way of expressing myself and connecting.
 
@@ -79,31 +79,35 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 >### Structure Considerations
 - #### Schema
-    - Below is the reference table for the database schema - two tables. One for retaining the information of the message left of the note form and one for user authentication. 
+    - Below is the reference table for the database schema - two tables. One (Note) for retaining the information of the message left from the note form and one (User) for user authentication. 
 
          <img src="documents/Databasemodel.png" />
 
 - #### Database Flow
-    - The yellow element is the user arriving at the site. The diagram details the initial thought process behind what elements would be visible to the user prior to authentication (green elements) and what elements would need authentication to view (blue elements). This was drawn up with the user story request in mind to protect the users data messages but to give them control over their own content. 
+    - The yellow element is the user arriving at the site. The diagram details the initial thought process behind what elements would be visible to the user prior to authentication (green elements) and what elements would need authentication to view (blue elements). This was drawn up with the user story request in mind to protect the users data & messages and give them control over their own content. 
 
          <img src="documents/databaseflow.png" />
 
-- #### Wireframes
-    - Referring to the database flow and i roughly sketched an idea of the rough structure. Which i then went on to progress in figma, as shown below. 
+    - Below is the first run through of the elements of the site and the users journey focusing more on CRUD functionality and the potential modal pop ups and flash messages.
 
-        <img src="" />
+         <img src="documents/initialuserflow.JPG" height="400px" /> 
+
+- #### Wireframes
+    - Referring to the database flow and i roughly sketched an idea of the rough structure and layount. I then took this rough structure and used Figma to consider the responsive elements as shown in the mock ups section. 
+
+        <img src="documents/initialwireframe.JPG" height="400px" />
 
 >### Aesthetic Considerations
 
 - #### Colour scheme
-    -  In order to fulfil the brief of making this platform to provide a sense of serenity and tranquility and tying it in to the Irish Gaelic origin of the name i opted for a pallete of dark moody greens. accented by light greys and a pop of yellowy gold in order to add contrast and bring attention to features. It was important to me to have a lighter grey within the palette to utilise on forms and provide that clear definition and contrast for users when reading each others messages. When considering using a darker more moody theme throughout the site i was keen to ensure that it was still accessible. Coloors does help by indicating the contrast text colour but i referred to the slack channel a11y-accessibility for their thoughts and found a brilliant link to dark theme sites. From this i gleamed that a dark theme was fine but should be enhanced by using lighter areas to bring text forward and enhance reading. https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
+    -  In order to fulfil the brief of creating platform that provides a sense of serenity and tranquility and tying it in to the Irish Gaelic origin of the name, I opted for a pallete of dark moody greens. The greens are accented by light greys and a pop of yellowy gold in order to add contrast and bring attention to features. It was important to me to have a lighter grey within the palette to utilise on forms and provide that clear definition and contrast for users when reading each others messages. When considering using a darker more moody theme throughout the site i was keen to ensure that it was still accessible. Coloors does help by indicating the contrast text colour but i referred to the slack channel a11y-accessibility for their thoughts and found a brilliant link to dark theme sites. From this i gleamed that a dark theme was fine but should be enhanced by using lighter areas to bring text forward and enhance readability. https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 
 
         <img src="documents/colourpallet.png" height="70px" />
 
 
 - #### Typography
-    - The main brand identifiable font used is Spectral - a unique google font that i felt captured the traditional nature of story telling with a slightly softer side to it. Achieving this whilst still being accessible and very readable. The secondary font for headings was intended to be Inter however there were not any sub header occasions. Open Sans as the main text font as it is very user friendly and accessible. Sans-serif has been chosen as a fall-back font.
+    - The main brand identifiable font used is Spectral - a unique google font that i felt captured the traditional nature of story telling with a slightly softer side to it. Achieving this whilst still being accessible and very readable. The secondary font for headings was intended to be Inter however there were not any sub header occasions where i felt it was appropriate to use it. Open Sans as the main text font as it is very user friendly and accessible. Sans-serif has been chosen as a fall-back font.
    
 
     - Spectral - for headings
@@ -124,7 +128,10 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 
 - #### Imagery
-    - I selected two images one of a man with his hand on his chest and one of a woman with her hands clasped in thought. I felt like both images conveyed the sentiment of the site and also worked well when overlaid with the dark green colour. Both images were sourced from Istock.
+    - I selected two images one of a man with his hand on his chest and one of a woman with her hands clasped in thought. I felt like both images conveyed the sentiment of the site and also worked well when overlaid with the dark green colour. Once in situ i decided to reverse the order of the images taking the clasped hands image to the top hero section and the hand on heart to the bottom. I felt the warm colours of the clasped hands image worked better to welcome people to the site and also bring those golden tones in that work well with the golden accents. Both images were sourced from Istock.
+
+         <img src="documents/recap-bg.jpg" height="200px" /> <img src="documents/hero-bg.jpg" height="200px" />
+
 >### Structure & Aesthetics Considered
 
 - #### Mockups
@@ -140,7 +147,7 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 >#### Common Features Across All Pages
 - **Favicon** - 
-    - a favicon of the symbol used throughout the site is visible on the site tab so that all users can easily navigate back to the site with ease when multiple tabs are open.
+    - a favicon of the symbol used throughout the site is visible on the site tab so that all users can easily navigate back to the site with ease when multiple tabs are open. Please note that this is the Centos Brand mark and would be trademarked but used in this setting as a temporary favicon and brand symbol. before being published to market this would need to be replaced with a unique symbol.
 - **Header** - 
     - Provide instant impression on the user but simple structure so as not to distract.
     - I opted to use a slightly transparent navigation bar with a left aligned logo that links back to the home page. 
@@ -163,7 +170,7 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 -  **Index/Home**
     - Welcome to Anam Cara
     - 3 options within the body to help users decide where they want to navigate to
-    - qoutes section displaying sample messages
+    - Qoutes section displaying sample messages
     - Recap information at the bottom of the page
 -  **Notes/Connect**
     - Card displaying link and info to encourage user to login or sign up to create a message
@@ -185,11 +192,13 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 
 ## Anam Cara Future Iterations
 
-- The first iteration would be to improve the datepicker utilised. Currently the datepicker allows you to use dates in the past. This could be abused by users. To prevent this from happening the next iteration would include a customisable datepicker.
+- The first iteration would be to improve the datepicker utilised. Currently the datepicker allows you to use dates in the past. Although this is in keeping with the less restrictive ethos of the site and aligned with allowing the users to choose dates that resonate with them, this feature could be abused by users to have their messages published early by inputting retrospective dates. To prevent this from happening the next iteration would include a customisable datepicker that would restrict access to past dates.
+- A personal Dashboard would be created to allow users to see their messages pending or posted in one place. This dashboard would allow users to update or delete their messages before the publish date. This would be an improvement on the current model of having to wait for the publish date in order to access the message to edit or delete. 
+- An option to edit account details such as changing username, password resets and adding a linked email. This would assist users to increase account security but also allow the business to build their customer email database.
 - The option to customize the privacy settings of my messages, choosing whether they are publicly visible or restricted to a select group of individuals.
 - The platform to have the ability to facilitate the sharing of resources, recommendations, and uplifting content, allowing us to inspire and uplift each other in our personal journeys. So admin input. 
 - Notifications or reminders to revisit the platform and read new messages, ensuring that users miss out on the heartwarming and inspiring content shared by others.
-- The potential for users to have the ability to engage in meaningful discussions via a messenger element and provide support to others by commenting on their messages, fostering a sense of community and connection.
+- The potential for users to have the ability to engage in meaningful discussions via a private messenger element and provide support to others by commenting on their messages or sending them private messages, fostering a sense of community and connection.
 - Anonymity Preference: Include a checkbox or toggle option for users to indicate whether they want their whispers to be anonymous or if they are comfortable with their name being associated with their submission.
 - Sharing Preference: Offer a selection for users to choose whether they want their whispers to be publicly visible to the community or if they prefer to keep them private, visible only to themselves or selected individuals.
 - Media Attachments (optional): Allow users to attach relevant photos, videos, or audio files that enhance their whispers. This could be images representing memories, artwork, or personal recordings.
@@ -247,13 +256,15 @@ Overall, Anam Cara seeks to provide a mindful and soulful digital sanctuary wher
 - [Coloors](https://coolors.co/) - Used to create the colour palettes and identify complimentary and contrasting colours. This was also used to check the accessibilty of the text colour with each background colour during the planning stage. 
 - [RGBA Color Picker](https://rgbacolorpicker.com/hex-to-rgba) - to match hex colours to an RGBA so that i could change the apacity accurately.
 - [Istock](https://www.istockphoto.com/)- Istock used for all imagery within the site.
+    - [Hero](https://www.istockphoto.com/photo/women-raise-their-hands-to-ask-for-blessing-from-god-gm1265115237-370717573) - Image by Kamonwan Wankaew
+    - [Recap](https://www.istockphoto.com/photo/people-praying-together-at-church-gm1339455768-419792606?clarity=false) - Image by NoonVirachada
 - [Figma](https://www.figma.com/file/ladBUkKqWA50bv0xDRaMUH/SPLANETS?node-id=0%3A1&t=rRbFBuY40vnsdoR4-1) used to create mock up designs
 - [amiresponsive](https://ui.dev/amiresponsive) Used to create the live image capture of site
 https://lucid.app/
 <a name="#testing"></a>
 ## Testing
 
->Please refer to TESTING.md document
+>Please refer to [TESTING.md](TESTING.md) document
 
 
 <a name="deployment"></a>
@@ -338,3 +349,4 @@ If you wish to clone or download this repository to your local device you can fo
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
 - Code Institute [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME)
 - Slacks numerous Markdown questions and answers
+- [Stack Edit](https://stackedit.io) in browser markdown editor
