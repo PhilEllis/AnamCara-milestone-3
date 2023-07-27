@@ -24,15 +24,15 @@
             <div class="row mb-3">
               <label for="note_location" class="col-sm-2 col-form-label">Location</label>
               <div class="col-sm-10">
-                <select id="note_location" name="note_location" value="{{ note.note_location }}" class="form-select" aria-label="Default select example" required>
-                  <option value="" selected disabled>Select Continent</option>
-                  <option value="Africa">Africa</option>
-                  <option value="Antarctica">Antarctica</option>
-                  <option value="Asia">Asia</option>
-                  <option value="Europe">Europe</option>
-                  <option value="North America">North America</option>
-                  <option value="Australasia">Australasia</option>
-                  <option value="South America">South America</option>
+                <select id="note_location" name="note_location" class="form-select" aria-label="Default select example" required>
+                  <option value="" {% if not note.note_location %}selected{% endif %} disabled>Select Continent</option>
+                  <option value="Africa" {% if note.note_location == 'Africa' %}selected{% endif %}>Africa</option>
+                  <option value="Antarctica" {% if note.note_location == 'Antarctica' %}selected{% endif %}>Antarctica</option>
+                  <option value="Asia" {% if note.note_location == 'Asia' %}selected{% endif %}>Asia</option>
+                  <option value="Europe" {% if note.note_location == 'Europe' %}selected{% endif %}>Europe</option>
+                  <option value="North America" {% if note.note_location == 'North America' %}selected{% endif %}>North America</option>
+                  <option value="Australasia" {% if note.note_location == 'Australasia' %}selected{% endif %}>Australasia</option>
+                  <option value="South America" {% if note.note_location == 'South America' %}selected{% endif %}>South America</option>
                 </select>
               </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="row mb-3">
               <label for="note_message" class="col-sm-2 col-form-label">Message</label>
               <div class="col-sm-10">
-                <textarea name="note_message" value="{{ note.note_message }}" class="form-control" id="note_message" placeholder="Share what is in your heart..." rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
+                <textarea name="note_message" class="form-control" id="note_message" placeholder="Share what is in your heart..." rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
               </div>
             </div>
             <!-- note_connect -->
