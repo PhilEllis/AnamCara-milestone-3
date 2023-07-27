@@ -82,13 +82,17 @@ Logout NavBar Button| Logged in user clicks to logout | User logged out and redi
 
 <a name="#css"></a>
 ## CSS3 validator - Pass
-<img src="assets/img/readmeimg/cssvalid.png" />
-http://jigsaw.w3.org/css-validator/validator$link
+One Warning - line 4 - Imported style sheets are not checked in direct input and file upload modes
+<img src="documents/cssvalidator.png" />
+<img src="documents/csswarning.png" />
 
 <a name="#html"></a>
 ## HTML5 validator
+- base.html - Passed with removal of all Jinja Templating and Static URLS
+- home.html - Passed with removal of all Jinja templating and Static URLS with warnings regarding missing doctype contained in the base.html
+- About.html - Passed with removal of all Jinja templating with warnings regarding missing doctype contained in the base.html
 - 
-- 
+<img src="documents/htmlvalidator.png" />
 <a name="#js"></a>
 ## Javascript validator
 - 

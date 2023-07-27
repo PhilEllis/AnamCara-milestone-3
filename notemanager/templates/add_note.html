@@ -17,7 +17,7 @@
             <div class="row mb-3">
               <label for="note_name" class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-10">
-                <input name="note_name" type="name" class="form-control" id="note_name" required minlength="3" maxlength="60" required>
+                <input name="note_name" type="text" class="form-control" id="note_name" minlength="3" maxlength="60" required>
               </div>
             </div>
             <!-- note_location -->
@@ -25,7 +25,7 @@
               <label for="note_location" class="col-sm-2 col-form-label">Location</label>
               <div class="col-sm-10">
                 <select id="note_location" name="note_location" class="form-select" aria-label="select continent" required>
-                  <option selected>Select Continent</option>
+                  <option value="" selected disabled>Select Continent</option>
                   <option value="Africa">Africa</option>
                   <option value="Antarctica">Antarctica</option>
                   <option value="Asia">Asia</option>
@@ -47,14 +47,14 @@
             <div class="row mb-3">
               <label for="note_title" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">
-                <input name="note_title" type="text" class="form-control" id="note_title" required minlength="5" maxlength="60" required>
+                <input name="note_title" type="text" class="form-control" id="note_title" minlength="5" maxlength="60" required>
               </div>
             </div>
             <!-- note_message -->
             <div class="row mb-3">
               <label for="note_message" class="col-sm-2 col-form-label">Message</label>
               <div class="col-sm-10">
-                <textarea name="note_message" type="text" class="form-control" id="note_message" placeholder="Share what is in your heart..." rows="3" required minlength="100" maxlength="1000"></textarea>
+                <textarea name="note_message" class="form-control" id="note_message" placeholder="Share what is in your heart..." rows="3" required minlength="100" maxlength="1000"></textarea>
               </div>
             </div>
             <!-- note_connect -->
@@ -71,8 +71,10 @@
                 <input name="publish_date" type="date" class="form-control" id="publish_date" required>
               </div>
             </div>
-            <button type="submit" class="btn btn-outline-dark">Send your heart's whisper</button>
-          </div>
+            <div>
+            <button type="submit" class="btn btn-outline-dark mb-3">Send your heart's whisper</button>
+            </div>
+          </form>
           <div class="card-footer text-body-secondary">
             <i class="fa-brands fa-centos fa-xl"></i>
           </div>
@@ -80,6 +82,7 @@
       </div>
     </div>
   </div>
+</div>
 </section>
 <!-- End Add Note -->
 {% endblock %}

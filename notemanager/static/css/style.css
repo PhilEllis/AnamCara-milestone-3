@@ -1,10 +1,10 @@
- /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Fonts
-  --------------------------------------------------------------*/
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Spectral:ital,wght@0,500;0,600;1,300;1,400;1,500&display=swap');
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Spectral:ital,wght@0,500;0,600;1,300;1,400;1,500&display=swap');
 
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
@@ -30,24 +30,25 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
- /*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
-  #header {
-    z-index: 997;
-    padding: 0;
-    background: rgb(18, 22, 16, 0.8);
-    font-family: "Inter", sans-serif;
-  }
 
- /*--------------------------------------------------------------
+/*--------------------------------------------------------------
+  # Header
+--------------------------------------------------------------*/
+#header {
+  z-index: 997;
+  padding: 0;
+  background: rgb(18, 22, 16, 0.8);
+  font-family: "Inter", sans-serif;
+}
+
+/*--------------------------------------------------------------
   # Navigation Menu
-  --------------------------------------------------------------*/
+--------------------------------------------------------------*/
 .logo {
-    font-family: "Spectral", sans-serif;
-    font-weight: 500;
-    font-size: 38px;
-    color: #ADAA99;
+  font-family: "Spectral", sans-serif;
+  font-weight: 500;
+  font-size: 38px;
+  color: #ADAA99;
 }
 
 .logo:hover {
@@ -55,8 +56,8 @@ h6 {
 }
 
 .nav-item a {
-    margin-right: 15px;
-    color: #ADAA99;
+  margin-right: 15px;
+  color: #ADAA99;
 }
 
 .nav-item a:hover {
@@ -64,138 +65,138 @@ h6 {
 }
 
 .navbar-toggler {
-    background-color: rgba(173, 170, 153, 0.6);
+  background-color: rgba(173, 170, 153, 0.6);
 }
+
 /*--------------------------------------------------------------
 #  Login Button
 --------------------------------------------------------------*/
 .login-btn {
-    color: #fff;
-    border-radius: 4px;
-    padding: 7px 25px 8px 25px;
-    white-space: nowrap;
-    transition: 0.3s;
-    font-size: 14px;
-    display: inline-block;
-    border: 2px solid #D1D1D1;
-  }
+  color: #fff;
+  border-radius: 4px;
+  padding: 7px 25px 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  border: 2px solid #D1D1D1;
+}
   
-  .login-btn:hover {
-    background: #333533;
-    border: 2px solid #ffd584;
-  }
+.login-btn:hover {
+  background: #333533;
+  border: 2px solid #ffd584;
+}
   
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
     .login-btn {
       padding: 7px 20px 8px 20px;
       margin-right: 15px;
     }
   }
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Main
-  --------------------------------------------------------------*/
-  #main {
-    margin: 0 0 0 0;
-  }
+--------------------------------------------------------------*/
+#main {
+  margin: 0 0 0 0;
+}
 
-  .container .main {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-  }
+.container .main {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
 
-   /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Home Hero & About Hero
-  --------------------------------------------------------------*/
-  #hero {
-    width: 100%;
-    height: 100vh;
-    background: url("../img/hero-bg.jpg") repeat scroll center center/cover;
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    color: #ADAA99;
-  }
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") repeat scroll center center/cover;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  color: #ADAA99;
+}
 
-  #hero h1 {
-    font-family: "Spectral", sans-serif;
-    font-weight: 600;
-    margin-bottom: 60px;
-  }
+#hero h1 {
+  font-family: "Spectral", sans-serif;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
 
-   /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Notes Hero
-  --------------------------------------------------------------*/
-  #notes-hero {
-    width: 100%;
-    min-height: 500px;
-    background: url("../img/hero-bg.jpg") repeat scroll center center/cover;
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    color: #ADAA99;
-  }
+--------------------------------------------------------------*/
+#notes-hero {
+  width: 100%;
+  min-height: 500px;
+  background: url("../img/hero-bg.jpg") repeat scroll center center/cover;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  color: #ADAA99;
+}
 
+#notes-hero .card {
+  background-color: rgba(201, 202, 200, 1);
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
 
-  #notes-hero .card {
-    background-color: rgba(201, 202, 200, 1);
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
+#notes-hero .btn {
+  background-color: #B0B2AC;
+}
 
-  #notes-hero .btn {
-    background-color: #B0B2AC;
-  }
+#notes-hero .btn:hover {
+  background-color: #1f1f1f;
+  color: #ffd584;
+}
 
-  #notes-hero .btn:hover {
-    background-color: #1f1f1f;
-    color: #ffd584;
-  }
-
-    /*--------------------------------------------------------------
-  # Section title
-  --------------------------------------------------------------*/
-  .section-title {
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 70px;
-  }
+/*--------------------------------------------------------------
+  # Section title - taken from BootstrapMade ref in README.md
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 70px;
+}
   
-  .section-title h2 {
-    font-size: 32px;
-    font-weight: bold;
-    font-family: "Spectral", sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    color: #1f1f1f;
-  }
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Spectral", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #1f1f1f;
+}
   
-  .section-title h2::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 120px;
-    height: 1px;
-    background: #ADAA99;
-    bottom: 1px;
-    left: calc(50% - 60px);
-  }
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ADAA99;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
   
-  .section-title h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: #ffd584;
-    bottom: 0;
-    left: calc(50% - 20px);
-  }
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ffd584;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
 
-  /*--------------------------------------------------------------
-# Services
+/*--------------------------------------------------------------
+# Services - taken from BootstrapMade ref in README.md
 --------------------------------------------------------------*/
 #links {
   background-color: rgba(90, 99, 84, 1);
@@ -259,231 +260,231 @@ h6 {
 
 /*--------------------------------------------------------------
   # Quotes & About Page Quote Section
-  --------------------------------------------------------------*/
-  #quotes {
-    background-color: rgba(119, 130, 115, 1);
-    min-height: 800px;
-  }
+--------------------------------------------------------------*/
+#quotes {
+  background-color: rgba(119, 130, 115, 1);
+  min-height: 800px;
+}
 
-  #quotes .card {
-    background-color: rgba(209, 209, 209, 0.7);
-    margin-bottom: 70px;
-  }
+#quotes .card {
+  background-color: rgba(209, 209, 209, 0.7);
+  margin-bottom: 70px;
+}
 
-  #quotes .quotes-symbol {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+#quotes .quotes-symbol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
   
-   /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Recap & About Recap
-  --------------------------------------------------------------*/
-  #recap {
-    width: 100%;
-    min-height: 600px;
-    background: url("../img/recap-bg.jpg") repeat scroll center center/cover;
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    color: #ADAA99;
-  }
+--------------------------------------------------------------*/
+#recap {
+  width: 100%;
+  min-height: 600px;
+  background: url("../img/recap-bg.jpg") repeat scroll center center/cover;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  color: #ADAA99;
+}
 
-  #recap h1 {
-    font-family: "Spectral", sans-serif;
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #ffd584;
-  }
+#recap h1 {
+  font-family: "Spectral", sans-serif;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffd584;
+}
 
-  #recap i {
-    margin-bottom: 40px;
-    color: #ffd584;
-  }
+#recap i {
+  margin-bottom: 40px;
+  color: #ffd584;
+}
 
 /*--------------------------------------------------------------
   # Notes Display
-  --------------------------------------------------------------*/
-  #notes-display {
-    background-color: rgba(90, 99, 84, 1);
-  }
+--------------------------------------------------------------*/
+#notes-display {
+  background-color: rgba(90, 99, 84, 1);
+}
 
-  #notes-display .card-header {
-    font-family: "Spectral", sans-serif;
-    font-size: 26px;
-  }
+#notes-display .card-header {
+  font-family: "Spectral", sans-serif;
+  font-size: 26px;
+}
 
-  #notes-display .card {
-    background-color: rgba(241, 240, 240, 0.6);
-  }
+#notes-display .card {
+  background-color: rgba(241, 240, 240, 0.6);
+}
   
-  #notes-display li {
-    background-color: rgba(209, 209, 209, 0.7);
-  }
+#notes-display li {
+  background-color: rgba(209, 209, 209, 0.7);
+}
 
-  #notes-display .trash i {
-    color: #151515;
-  }
+#notes-display .trash i {
+  color: #151515;
+}
 
-  #notes-display .trash i:hover {
-    color: #ffd584;
-  }
+#notes-display .trash i:hover {
+  color: #ffd584;
+}
 
-  #notes-display .btn:hover {
-    color: #ffd584;
-  }
+#notes-display .btn:hover {
+  color: #ffd584;
+}
 
 /*--------------------------------------------------------------
   # Notes Add
-  --------------------------------------------------------------*/
-  #notes-add {
-    background-color: rgba(90, 99, 84, 1);
-  }
+--------------------------------------------------------------*/
+#notes-add {
+  background-color: rgba(90, 99, 84, 1);
+}
 
-  #notes-add .form-margin {
-    margin-top: 120px;
-    margin-bottom: 70px;
-  }
+#notes-add .form-margin {
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
 
-  #notes-add .card-header {
-    font-family: "Spectral", sans-serif;
-    font-size: 26px;
-  }
+#notes-add .card-header {
+  font-family: "Spectral", sans-serif;
+  font-size: 26px;
+}
 
-  #notes-add .card {
-    background-color: rgb(211, 211, 211);
-  }
+#notes-add .card {
+  background-color: rgb(211, 211, 211);
+}
 
-  #notes-add .btn {
-    background-color: #B0B2AC;
-  }
+#notes-add .btn {
+  background-color: #B0B2AC;
+}
 
-  #notes-add .btn:hover {
-    background-color: #1f1f1f;
-    color: #ffd584;
-  }
+#notes-add .btn:hover {
+  background-color: #1f1f1f;
+  color: #ffd584;
+}
   
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Notes edit
-  --------------------------------------------------------------*/
-  #notes-edit {
-    background-color: rgba(90, 99, 84, 1);
-  }
+--------------------------------------------------------------*/
+#notes-edit {
+  background-color: rgba(90, 99, 84, 1);
+}
 
-  #notes-edit .form-margin {
-    margin-top: 120px;
-    margin-bottom: 70px;
-  }
+#notes-edit .form-margin {
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
 
-  #notes-edit .card-header {
-    font-family: "Spectral", sans-serif;
-    font-size: 26px;
-  }
+#notes-edit .card-header {
+  font-family: "Spectral", sans-serif;
+  font-size: 26px;
+}
 
-  #notes-edit .card {
-    background-color: rgb(211, 211, 211);
-  }
+#notes-edit .card {
+  background-color: rgb(211, 211, 211);
+}
 
-  #notes-edit .btn {
-    background-color: #B0B2AC;
-  }
+#notes-edit .btn {
+  background-color: #B0B2AC;
+}
 
-  #notes-edit .btn:hover {
-    background-color: #1f1f1f;
-    color: #ffd584;
-  }
+#notes-edit .btn:hover {
+  background-color: #1f1f1f;
+  color: #ffd584;
+}
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Notes login
-  --------------------------------------------------------------*/
-  #notes-login {
-    background-color: rgba(90, 99, 84, 1);
-    height: 100vh;
-  }
+--------------------------------------------------------------*/
+#notes-login {
+  background-color: rgba(90, 99, 84, 1);
+  height: 100vh;
+}
 
-  #notes-login .form-margin {
-    margin-top: 120px;
-    margin-bottom: 70px;
-  }
+#notes-login .form-margin {
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
 
-  #notes-login .card {
-    background-color: rgb(211, 211, 211);
-  }
+#notes-login .card {
+  background-color: rgb(211, 211, 211);
+}
 
-  #notes-login .btn {
-    background-color: #B0B2AC;
-    margin-top: 20px;
-  }
+#notes-login .btn {
+  background-color: #B0B2AC;
+  margin-top: 20px;
+}
 
-  #notes-login .btn:hover {
-    background-color: #1f1f1f;
-    color: #ffd584;
-  }
+#notes-login .btn:hover {
+  background-color: #1f1f1f;
+  color: #ffd584;
+}
 
-  #notes-login a {
-    color: #1f1f1f;
-  }
+#notes-login a {
+  color: #1f1f1f;
+}
 
-  #notes-login a:hover {
-    color: #ffd584;
-  }
+#notes-login a:hover {
+  color: #ffd584;
+}
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Notes sign-in 
-  --------------------------------------------------------------*/
-  #notes-signin {
-    background-color: rgba(90, 99, 84, 1);
-    height: 100vh;
-  }
+--------------------------------------------------------------*/
+#notes-signin {
+  background-color: rgba(90, 99, 84, 1);
+  height: 100vh;
+}
 
-  #notes-signin .form-margin {
-    margin-top: 120px;
-    margin-bottom: 70px;
-  }
+#notes-signin .form-margin {
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
 
-  #notes-signin .card {
-    background-color: rgb(211, 211, 211);
-  }
+#notes-signin .card {
+  background-color: rgb(211, 211, 211);
+}
 
-  #notes-signin .btn {
-    background-color: #B0B2AC;
-    margin-top: 20px;
-  }
+#notes-signin .btn {
+  background-color: #B0B2AC;
+  margin-top: 20px;
+}
 
-  #notes-signin .btn:hover {
-    background-color: #1f1f1f;
-    color: #ffd584;
-  }
+#notes-signin .btn:hover {
+  background-color: #1f1f1f;
+  color: #ffd584;
+}
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Footer
-  --------------------------------------------------------------*/
-  footer {
-    background: rgb(18, 22, 16, 1);
-    color: #ADAA99;
-  }
+--------------------------------------------------------------*/
+footer {
+  background: rgb(18, 22, 16, 1);
+  color: #ADAA99;
+}
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
   # Footer
-  --------------------------------------------------------------*/
+--------------------------------------------------------------*/
 
-  .flashed-messages {
-    color: #ffd584;
-    padding: 10px;
-    margin: 10px 0;
-    position: absolute;
-    top: 100px;
-    left: 25%;
+.flashed-messages {
+  color: #ffd584;
+  padding: 10px;
+  margin: 10px 0;
+  position: absolute;
+  top: 100px;
+  left: 25%;
 }
 
 .flashed-messages ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .flashed-messages li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 #notes-login .flashed-messages {

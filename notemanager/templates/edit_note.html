@@ -17,7 +17,7 @@
             <div class="row mb-3">
               <label for="note_name" class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-10">
-                <input name="note_name" type="name" value="{{ note.note_name }}"class="form-control" id="note_name" required minlength="3" maxlength="60">
+                <input name="note_name" type="text" value="{{ note.note_name }}"class="form-control" id="note_name" required minlength="3" maxlength="60">
               </div>
             </div>
             <!-- note_location -->
@@ -25,7 +25,7 @@
               <label for="note_location" class="col-sm-2 col-form-label">Location</label>
               <div class="col-sm-10">
                 <select id="note_location" name="note_location" value="{{ note.note_location }}" class="form-select" aria-label="Default select example" required>
-                  <option selected>Select Continent</option>
+                  <option value="" selected disabled>Select Continent</option>
                   <option value="Africa">Africa</option>
                   <option value="Antarctica">Antarctica</option>
                   <option value="Asia">Asia</option>
@@ -54,7 +54,7 @@
             <div class="row mb-3">
               <label for="note_message" class="col-sm-2 col-form-label">Message</label>
               <div class="col-sm-10">
-                <textarea name="note_message" type="text" value="{{ note.note_message }}" class="form-control" id="note_message" placeholder="Share what is in your heart..." rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
+                <textarea name="note_message" value="{{ note.note_message }}" class="form-control" id="note_message" placeholder="Share what is in your heart..." rows="3" required minlength="100" maxlength="1000">{{ note.note_message }}</textarea>
               </div>
             </div>
             <!-- note_connect -->
@@ -72,6 +72,7 @@
               </div>
             </div>
             <button type="submit" class="btn btn-outline-dark">Edit your heart's whisper</button>
+            </form>
           </div>
           <div class="card-footer text-body-secondary">
             <i class="fa-brands fa-centos fa-xl"></i>
