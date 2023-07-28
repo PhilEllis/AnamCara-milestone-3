@@ -223,7 +223,7 @@ Cyclomatic complexity number for this function is 1.
 <a name="bugs"></a>
 ## Known Bugs
 
-- At the time of submission there are no known bugs within the site.
+- One potential bug known of at the time of submission - Not all notes appear to be listed in a descending order from most recently added first. This was fully tested locally and found to be fine but one blip shown when users posted via heroku app. 
 
 
 ## Bugs & challenges experienced during the build
